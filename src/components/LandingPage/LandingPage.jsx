@@ -1,16 +1,15 @@
 import { useNavigate } from "react-router-dom";
+import logo from "../../images/logo.png";
 import "./LandingPage.css";
-import logo from '../images/logo.png'
+import Logo from "../Logo/Logo";
 
 const LandingPage = () => {
   const navigate = useNavigate();
 
   return (
+    <>
+    <Logo/>
     <div className="landing-background">
-      <div className="logo-container">
-        <img src={logo} alt="Docora logo" className="logo" />
-      </div>
-
       <div className="landing-overlay">
         <h1 className="landing-title">
           Ti govoriš, Docora beleži. Izveštaji bez čekanja.
@@ -33,6 +32,7 @@ const LandingPage = () => {
         </button>
       </div>
     </div>
+        </>
   );
 };
 
