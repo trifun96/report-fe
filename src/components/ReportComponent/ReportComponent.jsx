@@ -18,6 +18,7 @@ const ReportComponent = () => {
   const handleLogout = async () => {
     try {
       await logoutUser();
+     localStorage.removeItem("user");
       navigate("/login");
     } catch (error) {
       console.error("Logout error:", error);

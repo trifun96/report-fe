@@ -52,6 +52,10 @@ const handleSubmit = async (e) => {
         lozinka: formData.password,
       });
 
+  if (response?.user) {
+        localStorage.setItem("user", JSON.stringify(response.user));
+      }
+
       alert("Uspešno prijavljeni");
       navigate("/user/report");
       return;
