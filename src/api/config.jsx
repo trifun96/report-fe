@@ -1,0 +1,1 @@
+export const baseUrl = process.env.NODE_ENV === 'production' ? 'https://docora.rs' : 'http://localhost:5000';
