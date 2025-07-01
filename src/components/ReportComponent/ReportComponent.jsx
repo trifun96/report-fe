@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import { useNavigate } from "react-router-dom";
 import { logoutUser } from "../../api/api";
-import { Header } from "../Header/Header";
+import Header from '../Header/Header';
 
 const ReportComponent = () => {
   const navigate = useNavigate();

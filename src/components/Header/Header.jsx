@@ -3,7 +3,7 @@ import { FaUserCircle } from "react-icons/fa";
 import logo from "../../images/logo.png";
 import "./Header.css";
 
-export const Header = ({ user, onLogout }) => {
+const Header = ({ user, onLogout }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -35,3 +35,5 @@ export const Header = ({ user, onLogout }) => {
     </header>
   );
 };
+
+export default Header;
