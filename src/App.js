@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import LandingPage from "./components/Landingpage/LandingPage";
+import LandingPage from "./components/LandingPage/LandingPage";
 import AuthForm from "./components/LoginForm/LoginForm";
 import ReportComponent from "./components/ReportComponent/ReportComponent";
 import PrivateRoute from "./helpers/PrivateRoute";
