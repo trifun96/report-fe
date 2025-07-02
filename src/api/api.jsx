@@ -65,3 +65,21 @@ export const logoutUser = async () => {
     throw err;
   }
 };
+
+export const forgotPassword = async (email) => {
+  const res = await fetch(`${baseUrl}/api/forgot-password`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email }),
+  });
+  return await res.json();
+};
+
+export const resetPassword = async (token, lozinka) => {
+  const res = await fetch(`${baseUrl}/api/reset-password/${token}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ lozinka }),
+  });
+  return await res.json();
+};

@@ -1,10 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import LandingPage from "./components/LandingPage/LandingPage";
+import LandingPage from "./components/landingpage/LandingPage";
 import AuthForm from "./components/LoginForm/LoginForm";
 import ReportComponent from "./components/ReportComponent/ReportComponent";
 import PrivateRoute from "./helpers/PrivateRoute";
 import PublicRoute from "./helpers/PublicRoute";
+import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
+import ResetPassword from "./components/ResetPassword/ResetPassword";
 
 function App() {
   return (
@@ -35,6 +37,8 @@ function App() {
             </PrivateRoute>
           }
         />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password/:token" element={<ResetPassword />} />
       </Routes>
     </div>
   );

@@ -36,47 +36,47 @@ const AuthForm = ({ mode }) => {
     }));
   };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  if (!isLogin && formData.password !== formData.confirmPassword) {
-    alert("Lozinke se ne poklapaju");
-    return;
-  }
-
-  try {
-    if (isLogin) {
-      // ✅ Login logika
-      const response = await loginUser({
-        email: formData.email,
-        lozinka: formData.password,
-      });
-
-  if (response?.user) {
-        localStorage.setItem("user", JSON.stringify(response.user));
-      }
-
-      alert("Uspešno prijavljeni");
-      navigate("/user/report");
+    if (!isLogin && formData.password !== formData.confirmPassword) {
+      alert("Lozinke se ne poklapaju");
       return;
     }
 
-    // ✅ Registracija logika
-    const response = await registerUser({
-      name: formData.name,
-      email: formData.email,
-      lozinka: formData.password,
-      delatnost: formData.delatnost,
-      adresa: formData.adresa,
-    });
+    try {
+      if (isLogin) {
+        // ✅ Login logika
+        const response = await loginUser({
+          email: formData.email,
+          lozinka: formData.password,
+        });
 
-    alert("Uspešna registracija");
-    navigate("/login");
-  } catch (err) {
-    alert(err.message || "Došlo je do greške");
-    console.error("Greška:", err);
-  }
-};
+        if (response?.user) {
+          localStorage.setItem("user", JSON.stringify(response.user));
+        }
+
+        alert("Uspešno prijavljeni");
+        navigate("/user/report");
+        return;
+      }
+
+      // ✅ Registracija logika
+      const response = await registerUser({
+        name: formData.name,
+        email: formData.email,
+        lozinka: formData.password,
+        delatnost: formData.delatnost,
+        adresa: formData.adresa,
+      });
+
+      alert("Uspešna registracija");
+      navigate("/login");
+    } catch (err) {
+      alert(err.message || "Došlo je do greške");
+      console.error("Greška:", err);
+    }
+  };
 
   return (
     <>
@@ -154,6 +154,13 @@ const handleSubmit = async (e) => {
               {isLogin ? "Registruj se" : "Prijavi se"}
             </span>
           </p>
+          {isLogin && (
+            <p className="forgot-password">
+              <span onClick={() => navigate("/forgot-password")}>
+                Zaboravili ste lozinku?
+              </span>
+            </p>
+          )}
         </div>
       </div>
     </>
