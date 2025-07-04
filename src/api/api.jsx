@@ -83,3 +83,41 @@ export const resetPassword = async (token, lozinka) => {
   });
   return await res.json();
 };
+
+export async function generateReport(prompt) {
+  const response = await fetch(`${baseUrl}/api/generate-report`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    credentials: "include", // ⬅️ cookie-based auth
+    body: JSON.stringify({ prompt }),
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(
+      `Network response was not ok: ${response.status} - ${errorText}`
+    );
+  }
+
+  const data = await response.json();
+  return data.report;
+}
+
+export async function sendReport(email, pdfBlob) {
+  const formData = new FormData();
+  formData.append("email", email);
+  formData.append("pdf", pdfBlob, "izvestaj.pdf");
+
+  const response = await fetch(`${baseUrl}/api/send-report`, {
+    method: "POST",
+    credentials: "include", // ⬅️ cookie-based auth
+    body: formData,
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to send report");
+  }
+}
+

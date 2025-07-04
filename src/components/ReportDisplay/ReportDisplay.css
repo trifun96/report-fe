@@ -1,0 +1,73 @@
+.container-main{
+padding: 0px 20px 20px 20px;
+}
+
+.report-container {
+  background-color: #1a1a1d;
+  border: 1px solid #2e2e33;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.report-container h2 {
+  font-size: 1.8rem;
+  color: #61dafb;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.report-preview {
+  background-color: #0f0f11;
+  border: 1px solid #2e2e33;
+  padding: 20px;
+  border-radius: 10px;
+  white-space: pre-wrap;
+  max-height: 400px;
+  overflow-y: auto;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #e0e0e0;
+}
+
+.send-button {
+  margin-top: 20px;
+  width: 100%;
+  background: linear-gradient(135deg, #61dafb, #1b9cf1);
+  color: #0f0f0f;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 40px;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.send-button:hover {
+  background-color: #1b9cf1;
+  color: white;
+}
+
+.send-button:disabled {
+  background-color: #444;
+  cursor: not-allowed;
+  color: #888;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
