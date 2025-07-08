@@ -1,9 +1,12 @@
 .logo-container {
-  display: flex;
-  width: 100%;
+  position: absolute;
   top: 20px;
-  left: 20px;
+  left: 0;
+  width: 100%; 
   z-index: 1000;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 20px;
 }
 
 .logo {
@@ -12,10 +15,8 @@
 
 @media (max-width: 768px) {
   .logo-container {
-    position: absolute;
-    top: 10;
-    left:50%;
-    transform: translate(-14%, 0);
+    justify-content: center; /* centriraj logo u mobilnom prikazu */
+    padding: 0; /* možeš po potrebi zadržati ili ukloniti */
   }
 
   .logo {
