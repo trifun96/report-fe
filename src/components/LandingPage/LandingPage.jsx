@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import "./LandingPage.css";
 import Logo from "../Logo/Logo";
+import FeaturesSection from "../FeaturePage/FeaturePage";
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -31,6 +32,7 @@ const LandingPage = () => {
         </button>
       </div>
     </div>
+    <FeaturesSection/>
         </>
   );
 };

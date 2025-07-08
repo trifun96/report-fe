@@ -111,7 +111,7 @@ const AuthForm = ({ mode }) => {
                 <input
                   type="text"
                   name="adresa"
-                  placeholder="Adresa ordinacije"
+                  placeholder="Adresa"
                   required
                   value={formData.adresa}
                   onChange={handleChange}
@@ -134,16 +134,6 @@ const AuthForm = ({ mode }) => {
               value={formData.password}
               onChange={handleChange}
             />
-            {!isLogin && (
-              <input
-                type="password"
-                name="confirmPassword"
-                placeholder="Potvrdi lozinku"
-                required
-                value={formData.confirmPassword}
-                onChange={handleChange}
-              />
-            )}
             <button type="submit" className="auth-button">
               {isLogin ? "Prijavi se" : "Registruj se"}
             </button>

@@ -1,5 +1,6 @@
 .logo-container {
-  position: fixed;
+  display: flex;
+  width: 100%;
   top: 20px;
   left: 20px;
   z-index: 1000;
@@ -11,9 +12,10 @@
 
 @media (max-width: 768px) {
   .logo-container {
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    position: absolute;
+    top: 10;
+    left:50%;
+    transform: translate(-14%, 0);
   }
 
   .logo {

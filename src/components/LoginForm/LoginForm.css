@@ -8,18 +8,6 @@
     overflow: hidden;
 }
 
-.auth-background::before {
-    content: "";
-    position: absolute;
-    top: -120px;
-    left: -100px;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, #1b9cf155, transparent 70%);
-    filter: blur(80px);
-    z-index: 0;
-}
-
 .auth-form-container {
     position: relative;
     z-index: 1;
@@ -31,7 +19,7 @@
     backdrop-filter: blur(16px);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
     animation: fadeIn 0.8s ease-out;
-    margin-top: 50px;
+    margin-top: -152px;
 }
 
 .auth-title {
@@ -128,7 +116,7 @@
     .auth-form-container {
         margin: 20px;
         padding: 17px;
-        margin-top: 100px;
+        margin-top: 150px;
     }
 
     .landing-overlay {
