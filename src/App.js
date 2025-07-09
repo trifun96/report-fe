@@ -10,6 +10,7 @@ import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
 import ResetPassword from "./components/ResetPassword/ResetPassword";
 import ReportDisplay from "./components/ReportDisplay/ReportDisplay";
 import Footer from "./components/FooterPage/FooterPage";
+import ContactForm from "./components/ContactPage/ContactForm";
 
 function App() {
   const [report, setReport] = useState("");
@@ -54,6 +55,7 @@ function App() {
         />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password/:token" element={<ResetPassword />} />
+        <Route path="/contact" element={<ContactForm />} />
       </Routes>
       <ReportDisplay
         report={report}

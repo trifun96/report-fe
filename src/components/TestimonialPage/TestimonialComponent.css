@@ -23,6 +23,8 @@
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 290px;
+  height: 280px;
 }
 
 .testimonial-card:hover {
@@ -43,7 +45,11 @@
   margin-bottom: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
 }
+
 
 .testimonial-author {
   display: flex;
@@ -53,12 +59,24 @@
   font-size: 0.95rem;
   color: #bbbbbb;
   margin-top: auto;
+  flex-direction: column;
 }
 
 .user-icon {
   font-size: 1.3rem;
   margin-right: 6px;
   color: #61dafb;
+}
+
+.author-name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.author-role {
+  font-size: 0.85rem;
+  color: #bbbbbb;
 }
 
 .slick-prev:before,
@@ -77,4 +95,13 @@
   box-sizing: border-box;
 }
 
+@media (max-width: 768px) {
+  .testimonial-text {
+    -webkit-line-clamp: unset;
+    max-height: none;
+  }
 
+  .testimonial-card {
+    min-height: 350px;
+  }
+}

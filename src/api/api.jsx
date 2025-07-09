@@ -121,3 +121,25 @@ export async function sendReport(email, pdfBlob) {
   }
 }
 
+export const sendContactMessage = async ({ name, email, message }) => {
+  try {
+    const res = await fetch(`${baseUrl}/api/contact`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, email, message }),
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      throw new Error(data.error || "Slanje poruke nije uspelo");
+    }
+
+    return data;
+  } catch (err) {
+    throw err;
+  }
+};
+

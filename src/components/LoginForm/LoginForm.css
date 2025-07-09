@@ -119,10 +119,14 @@
 }
 
 @media (max-width: 768px) {
+
+    .auth-background{
+        min-height: 0;
+        margin-top: 180px;
+    }
+
     .auth-form-container {
         margin: 20px;
-        padding: 17px;
-        margin-top: 150px;
     }
 
     .landing-overlay {
