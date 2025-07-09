@@ -20,7 +20,7 @@
   width: 100%;
   gap: 40px;
   flex-wrap: wrap;
-  margin-top: 100px;
+  margin-top: 70px;
 }
 
 .background-blob {
@@ -57,7 +57,7 @@
 
 .landing-image {
   max-width: 100%;
-  width: 420px;
+  width: 370px;
   border-radius: 16px;
   object-fit: cover;
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.25));
@@ -130,6 +130,7 @@
 
   .landing-overlay {
     text-align: center;
+    margin-top: 60px;
   }
 
   .landing-title {

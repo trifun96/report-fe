@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-left">
-          <h2 className="footer-logo">Docora</h2>
+          <h6 className="footer-logo">Docora</h6>
           <p className="footer-description">
             Docora je platforma koja olakšava kreiranje izveštaja i beleški
             korišćenjem glasa. Bilo da ste profesionalac, preduzetnik ili član

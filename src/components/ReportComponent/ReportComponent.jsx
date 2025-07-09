@@ -262,6 +262,7 @@ ${opis}
             <textarea
               placeholder="Opis ili napomene"
               value={opis}
+              spellCheck="false"
               onChange={(e) => setOpis(e.target.value)}
               required
               rows={6}

@@ -176,24 +176,24 @@ const ReportDisplay = React.memo(
     }, [report, email, patientData, clearReport]);
 
     return (
-      <>
-        <div className="container-main">
+        <>
           {report && (
-            <div className="report-container">
-              <h2>Generisani izveštaj</h2>
-              <pre className="report-preview">{report}</pre>
-              <button
-                className="send-button"
-                onClick={generateAndSendPdf}
-                disabled={loading}
-              >
-                {loading ? "Šaljem..." : "Pošalji PDF na mejl"}
-              </button>
+            <div className="container-main">
+              <div className="report-container">
+                <h2>Generisani izveštaj</h2>
+                <pre className="report-preview">{report}</pre>
+                <button
+                  className="send-button"
+                  onClick={generateAndSendPdf}
+                  disabled={loading}
+                >
+                  {loading ? "Šaljem..." : "Pošalji PDF na mejl"}
+                </button>
+              </div>
             </div>
           )}
-        </div>
-      </>
-    );
+        </>
+        );
   }
 );
 

@@ -3,6 +3,7 @@ import "./LandingPage.css";
 import docora from "../../images/docora.png";
 import Logo from "../Logo/Logo";
 import FeaturesSection from "../FeaturePage/FeaturePage";
+import TestimonialsSection from "../TestimonialPage/TestimonialComponent";
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -40,6 +41,7 @@ const LandingPage = () => {
   </div>
 </div>
 <FeaturesSection/>
+<TestimonialsSection/>
     </>
   );
 };
