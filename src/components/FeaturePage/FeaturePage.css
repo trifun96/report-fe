@@ -1,57 +1,62 @@
 .features-section {
-  padding: 80px 20px;
-  background-color: #121212; 
-  color: white;
-  text-align: center;
+    padding: 80px 20px;
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    max-width: 1500px;
 }
 
 .features-title {
-  font-size: 36px;
-  margin-bottom: 50px;
-  font-weight: bold;
+    font-size: 36px;
+    margin-bottom: 50px;
+    font-weight: bold;
 }
 
 .features-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
 }
 
 .feature-card {
-  background-color: rgba(255, 255, 255, 0.04);
-  padding: 30px;
-  border-radius: 16px;
-  width: 260px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.04);
+    padding: 30px;
+    border-radius: 16px;
+    width: 260px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
 .feature-icon {
-  font-size: 40px;
-  margin-bottom: 20px;
-  color: white;
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: white;
 }
 
 .feature-title {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
 }
 
 .feature-description {
-  font-size: 14px;
-  color: #e0e0e0;
-  line-height: 1.6;
+    font-size: 14px;
+    color: #e0e0e0;
+    line-height: 1.6;
 }
 
 @media (max-width: 768px) {
-    .features-section{
+    .features-section {
         padding: 20px;
+    }
+
+    .feature-card {
+        width: 320px;
     }
 }

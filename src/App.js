@@ -9,6 +9,7 @@ import PublicRoute from "./helpers/PublicRoute";
 import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
 import ResetPassword from "./components/ResetPassword/ResetPassword";
 import ReportDisplay from "./components/ReportDisplay/ReportDisplay";
+import Footer from "./components/FooterPage/FooterPage";
 
 function App() {
   const [report, setReport] = useState("");
@@ -60,6 +61,7 @@ function App() {
         email={email}
         clearReport={clearReport}
       />
+      <Footer></Footer>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
+import { UserRound } from "lucide-react";
 import logo from "../../images/logo.png";
 import "./Header.css";
 
@@ -20,7 +21,7 @@ const Header = ({ user, onLogout }) => {
       />
       <div className="user-section">
         <div className="user-icon" onClick={toggleDropdown}>
-          <FaUserCircle size={28} color="#ffffff" />
+        <UserRound size={35} color="#ffffff" />
         </div>
 
         {menuOpen && (
