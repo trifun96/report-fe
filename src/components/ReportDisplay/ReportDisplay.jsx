@@ -172,6 +172,8 @@ const ReportDisplay = React.memo(
           await sendReport(email, blob);
           toast.success("Izveštaj je uspešno poslat na mejl!", {
             toastId: "report-sent",
+            className: "my-toast",
+            progressClassName: "my-toast-progress",
           });
           clearReport();
         } catch (error) {

@@ -27,22 +27,26 @@ const LandingPage = () => {
             <div className="landing-benefits">
               <p>
                 Zaboravite na ručno pisanje i gubljenje vremena. Jednim govorom
-                kreirajte jasan, uredan i precizan izveštaj – za manje od
-                minuta. Više fokusa na ono što je važno, manje administracije.
-              </p>
-              <p>
-                Platforma omogućava automatsko pretvaranje izveštaja u PDF format,
-                kao i automatsko slanje na e-mail – sve u samo nekoliko klikova.
+                kreirajte jasan, uredan i precizan izveštaj. Aplikacija
+                omogućava automatsko pretvaranje izveštaja u PDF format, kao i
+                automatsko slanje na e-mail – sve u samo nekoliko klikova.
               </p>
             </div>
 
-            <button className="landing-button" onClick={() => navigate("/login")}>
+            <button
+              className="landing-button"
+              onClick={() => navigate("/login")}
+            >
               Započni besplatno
             </button>
           </div>
 
           <div className="landing-image-container">
-            <img src={docora} alt="Docora screenshot" className="landing-image" />
+            <img
+              src={docora}
+              alt="Docora screenshot"
+              className="landing-image"
+            />
           </div>
         </div>
       </div>

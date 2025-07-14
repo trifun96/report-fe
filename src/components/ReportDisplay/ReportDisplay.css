@@ -62,6 +62,17 @@ padding: 0px 20px 20px 20px;
   color: #888;
 }
 
+.my-toast {
+  background: #383636 !important;  
+  color: white !important;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.my-toast-progress {
+  background: white !important;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
