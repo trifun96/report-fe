@@ -3,6 +3,7 @@ import pdfMake from "pdfmake/build/pdfmake";
 import pdfFonts from "pdfmake/build/vfs_fonts";
 import { sendReport } from "../../api/api";
 import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./ReportDisplay.css";
 
 pdfMake.vfs = pdfFonts.vfs;
@@ -46,7 +47,6 @@ const ReportDisplay = React.memo(
         .replace(/AI model.*(\r?\n)?/gi, "")
         .replace(/\n{2,}/g, "\n")
         .trim();
-
       const docDefinition = {
         content: [
           {
@@ -61,8 +61,8 @@ const ReportDisplay = React.memo(
                 y1: 0,
                 x2: 515,
                 y2: 0,
-                lineWidth: 1,
-                lineColor: "#007ACC",
+                lineWidth: 2,
+                lineColor: "#005f9e",
               },
             ],
             margin: [0, 5, 0, 20],
@@ -85,16 +85,16 @@ const ReportDisplay = React.memo(
             layout: {
               hLineWidth: () => 0,
               vLineWidth: () => 0,
-              paddingTop: () => 4,
-              paddingBottom: () => 4,
-              paddingLeft: () => 0,
-              paddingRight: () => 0,
+              paddingTop: () => 6,
+              paddingBottom: () => 6,
+              paddingLeft: () => 4,
+              paddingRight: () => 4,
             },
           },
           {
             text: "Izveštaj o pregledu",
             style: "sectionTitle",
-            margin: [0, 30, 0, 10],
+            margin: [0, 30, 0, 15],
           },
           {
             text: cleanedReport,
@@ -103,36 +103,46 @@ const ReportDisplay = React.memo(
         ],
         styles: {
           mainHeader: {
-            fontSize: 22,
+            fontSize: 26,
             bold: true,
             alignment: "center",
-            color: "#007ACC",
-            margin: [0, 0, 0, 4],
+            color: "#005f9e",
+            margin: [0, 0, 0, 8],
+            fontFamily: "Helvetica",
           },
           subHeader: {
-            fontSize: 12,
+            fontSize: 13,
             alignment: "center",
             italics: true,
-            margin: [0, 0, 0, 20],
+            color: "#555",
+            margin: [0, 0, 0, 25],
+            fontFamily: "Helvetica",
           },
           sectionTitle: {
-            fontSize: 14,
+            fontSize: 16,
             bold: true,
             decoration: "underline",
+            color: "#007acc",
+            fontFamily: "Helvetica",
           },
           reportContent: {
             fontSize: 12,
-            lineHeight: 1.6,
+            lineHeight: 1.7,
+            fontFamily: "Times-Roman",
+            color: "#222",
+          },
+          patientInfoBox: {
+            margin: [0, 15, 0, 15],
+            fontSize: 11,
+            fillColor: "#e9f2fb",
+            color: "#222",
+            fontFamily: "Helvetica",
           },
           footerInfo: {
             fontSize: 10,
             italics: true,
-          },
-          patientInfoBox: {
-            margin: [0, 10, 0, 10],
-            fontSize: 11,
-            fillColor: "#f3f6f9",
-            color: "#333",
+            color: "#777",
+            fontFamily: "Helvetica-Oblique",
           },
         },
         footer: function (currentPage, pageCount) {
@@ -149,10 +159,10 @@ const ReportDisplay = React.memo(
                 alignment: "right",
               },
             ],
-            margin: [40, 0, 40, 20], // levo, gore, desno, dole
+            margin: [40, 0, 40, 25],
           };
         },
-        pageMargins: [40, 40, 40, 60],
+        pageMargins: [40, 40, 40, 70],
       };
 
       setLoading(true);
@@ -176,24 +186,24 @@ const ReportDisplay = React.memo(
     }, [report, email, patientData, clearReport]);
 
     return (
-        <>
-          {report && (
-            <div className="container-main">
-              <div className="report-container">
-                <h2>Generisani izveštaj</h2>
-                <pre className="report-preview">{report}</pre>
-                <button
-                  className="send-button"
-                  onClick={generateAndSendPdf}
-                  disabled={loading}
-                >
-                  {loading ? "Šaljem..." : "Pošalji PDF na mejl"}
-                </button>
-              </div>
+      <>
+        {report && (
+          <div className="container-main">
+            <div className="report-container">
+              <h2>Generisani izveštaj</h2>
+              <pre className="report-preview">{report}</pre>
+              <button
+                className="send-button"
+                onClick={generateAndSendPdf}
+                disabled={loading}
+              >
+                {loading ? "Šaljem..." : "Pošalji PDF na mejl"}
+              </button>
             </div>
-          )}
-        </>
-        );
+          </div>
+        )}
+      </>
+    );
   }
 );
 

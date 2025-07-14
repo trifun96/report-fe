@@ -3,6 +3,8 @@ import "./LoginForm.css";
 import { useNavigate } from "react-router-dom";
 import Logo from "../Logo/Logo";
 import { loginUser, registerUser } from "../../api/api";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const AuthForm = ({ mode }) => {
   const [isLogin, setIsLogin] = useState(mode === "login");
@@ -39,14 +41,8 @@ const AuthForm = ({ mode }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!isLogin && formData.password !== formData.confirmPassword) {
-      alert("Lozinke se ne poklapaju");
-      return;
-    }
-
     try {
       if (isLogin) {
-        // ✅ Login logika
         const response = await loginUser({
           email: formData.email,
           lozinka: formData.password,
@@ -55,13 +51,14 @@ const AuthForm = ({ mode }) => {
         if (response?.user) {
           localStorage.setItem("user", JSON.stringify(response.user));
         }
-
-        alert("Uspešno prijavljeni");
+        toast("Uspešna prijava!", {
+          className: "my-toast",
+          progressClassName: "my-toast-progress",
+        });
         navigate("/user/report");
         return;
       }
 
-      // ✅ Registracija logika
       const response = await registerUser({
         name: formData.name,
         email: formData.email,
@@ -70,7 +67,10 @@ const AuthForm = ({ mode }) => {
         adresa: formData.adresa,
       });
 
-      alert("Uspešna registracija");
+      toast("Uspešna registracija!", {
+        className: "my-toast",
+        progressClassName: "my-toast-progress",
+      });
       navigate("/login");
     } catch (err) {
       alert(err.message || "Došlo je do greške");

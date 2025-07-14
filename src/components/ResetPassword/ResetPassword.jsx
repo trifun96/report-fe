@@ -3,6 +3,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import { resetPassword } from "../../api/api";
 import "./ResetPassword.css";
 import Logo from "../Logo/Logo";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ResetPassword = () => {
   const { token } = useParams();
@@ -22,7 +24,10 @@ const ResetPassword = () => {
 
     try {
       await resetPassword(token, password);
-      alert("Lozinka je uspešno resetovana.");
+      toast("Lozinka je uspešno promenjena!", {
+        className: "my-toast",
+        progressClassName: "my-toast-progress",
+      });
       navigate("/login");
     } catch (err) {
       alert(err.message);
@@ -36,8 +41,8 @@ const ResetPassword = () => {
         <form onSubmit={handleSubmit}>
           <h2>Kreirajte novu lozinku</h2>
           <p>
-            Unesite lozinku koja je sigurna i lako pamtljiva — vaša sigurnost nam je na
-            prvom mestu.
+            Unesite lozinku koja je sigurna i lako pamtljiva — vaša sigurnost
+            nam je na prvom mestu.
           </p>
           <input
             type="password"
@@ -53,7 +58,9 @@ const ResetPassword = () => {
             onChange={(e) => setConfirmPassword(e.target.value)}
             required
           />
-          {error && <p style={{ color: "red", marginBottom: "15px" }}>{error}</p>}
+          {error && (
+            <p style={{ color: "red", marginBottom: "15px" }}>{error}</p>
+          )}
           <button type="submit">Resetuj lozinku</button>
         </form>
       </div>

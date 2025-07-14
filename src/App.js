@@ -11,6 +11,7 @@ import ResetPassword from "./components/ResetPassword/ResetPassword";
 import ReportDisplay from "./components/ReportDisplay/ReportDisplay";
 import Footer from "./components/FooterPage/FooterPage";
 import ContactForm from "./components/ContactPage/ContactForm";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const [report, setReport] = useState("");
@@ -64,6 +65,7 @@ function App() {
         clearReport={clearReport}
       />
       <Footer></Footer>
+        <ToastContainer position="top-center" autoClose={3000} />
     </div>
   );
 }
