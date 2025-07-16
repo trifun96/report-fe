@@ -51,6 +51,7 @@ const AuthForm = ({ mode }) => {
         if (response?.user) {
           localStorage.setItem("user", JSON.stringify(response.user));
         }
+
         toast("Uspešna prijava!", {
           className: "my-toast",
           progressClassName: "my-toast-progress",
@@ -100,14 +101,29 @@ const AuthForm = ({ mode }) => {
                   value={formData.name}
                   onChange={handleChange}
                 />
-                <input
-                  type="text"
+                <select
                   name="delatnost"
-                  placeholder="Delatnost"
                   required
                   value={formData.delatnost}
                   onChange={handleChange}
-                />
+                >
+                  <option value="">Izaberi delatnost</option>
+                  <option value="gradjevina-inzenjering">
+                    Građevinarstvo i inženjering
+                  </option>
+                  <option value="terenske-usluge">
+                    Terenske i servisne usluge
+                  </option>
+                  <option value="inspekcija-kontrola">
+                    Inspekcija i kontrola kvaliteta
+                  </option>
+                  <option value="upravljanje-projektima">
+                    Upravljanje i koordinacija projekata
+                  </option>
+                  <option value="zdravstvo-stomatologija">
+                    Zdravstvo i stomatologija
+                  </option>
+                </select>
                 <input
                   type="text"
                   name="adresa"

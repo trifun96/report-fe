@@ -73,7 +73,7 @@
 }
 
 .landing-subtitle {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #d0d0d0;
   margin-bottom: 24px;
   line-height: 1.6;
@@ -130,20 +130,20 @@
 
   .landing-overlay {
     text-align: center;
-    margin-top: 60px;
+    margin-top: 20px;
   }
 
   .landing-title {
-    font-size: 2.3rem;
+    font-size: 1.9rem;
   }
 
   .landing-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 16px;
   }
 
   .landing-benefits p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-bottom: 24px;
   }
 
@@ -167,7 +167,7 @@
 
 @media (max-width: 480px) {
   .landing-title {
-    font-size: clamp(2.2rem, 6vw, 2.4rem);
+    font-size: clamp(1.9rem, 6vw, 1.9rem);
   }
 
   .landing-subtitle {
@@ -175,7 +175,7 @@
   }
 
   .landing-benefits p {
-    font-size: clamp(0.95rem, 3.5vw, 1rem);
+    font-size: clamp(1.1rem, 4vw, 1.1rem);
   }
 
   .landing-button {
