@@ -52,7 +52,6 @@ const LandingPage = () => {
       <FeaturesSection />
       <TestimonialsSection />
       <FAQAccordion />
-      <Footer></Footer>
     </>
   );
 };
