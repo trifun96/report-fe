@@ -4,6 +4,8 @@ import docora from "../../images/docora.png";
 import Logo from "../Logo/Logo";
 import FeaturesSection from "../FeaturePage/FeaturePage";
 import TestimonialsSection from "../TestimonialPage/TestimonialComponent";
+import FAQAccordion from "../FAQAcordion/FAQAccordion";
+import Footer from "../FooterPage/FooterPage";
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -18,16 +20,13 @@ const LandingPage = () => {
               Govorite – Docora beleži. Profesionalni izveštaji bez čekanja.
             </h1>
             <p className="landing-subtitle">
-              Docora je savremena platforma za automatsko kreiranje
+              Docora je savremena aplikacija za automatsko kreiranje
               profesionalnih i strukturiranih izveštaja i beleški pomoću
-              glasovnih komandi. Brže dokumentovanje, efikasniji rad – bez
-              potrebe za kucanjem.
+              glasovnih komandi.
             </p>
-
             <div className="landing-benefits">
               <p>
-                Zaboravite na ručno pisanje i gubljenje vremena. Jednim govorom
-                kreirajte jasan, uredan i precizan izveštaj. Aplikacija
+                Zaboravite na ručno pisanje i gubljenje vremena. Aplikacija
                 omogućava automatsko pretvaranje izveštaja u PDF format, kao i
                 automatsko slanje na e-mail – sve u samo nekoliko klikova.
               </p>
@@ -52,6 +51,8 @@ const LandingPage = () => {
       </div>
       <FeaturesSection />
       <TestimonialsSection />
+      <FAQAccordion />
+      <Footer></Footer>
     </>
   );
 };

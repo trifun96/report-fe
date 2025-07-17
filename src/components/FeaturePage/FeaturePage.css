@@ -1,5 +1,4 @@
 .features-section {
-    padding: 80px 20px;
     background-color: #121212;
     color: white;
     text-align: center;
@@ -50,11 +49,9 @@
 }
 
 @media (max-width: 768px) {
-    .features-section {
-        padding: 20px;
-    }
 
     .feature-card {
         width: 320px;
+        padding: 0px;
     }
 }

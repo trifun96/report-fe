@@ -1,5 +1,5 @@
 .testimonials-section {
-  background-color: #0f0f0f;
+  background-color: #121212;
   color: #ffffff;
   padding: 60px 50px;
   text-align: center;
@@ -103,5 +103,9 @@
 
   .testimonial-card {
     min-height: 350px;
+  }
+
+  .testimonials-section {
+    padding: 60px 35px;
   }
 }
