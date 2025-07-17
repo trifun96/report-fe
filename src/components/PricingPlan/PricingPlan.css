@@ -1,0 +1,105 @@
+.pricing-container {
+    background-color: #121212;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+
+.pricing-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.pricing-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.pricing-card {
+    background: linear-gradient(145deg, #1f1f1f, #2c2c2c);
+    color: white;
+    padding: 30px 25px;
+    border-radius: 16px;
+    width: 280px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.pricing-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.pricing-card .price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.pricing-card .reports {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #bbbbbb;
+}
+
+.pricing-card .description {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    color: #dddddd;
+}
+
+.pricing-card .btn {
+    background: linear-gradient(135deg, #61dafb, #1b9cf1);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.pricing-card .btn:hover {
+    background: linear-gradient(135deg, #61dafb, #1b9cf1);
+}
+
+.pricing-card.popular {
+    border: 2px solid #1b9cf1;
+}
+
+.badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: linear-gradient(135deg, #61dafb, #1b9cf1);
+    color: black;
+    padding: 5px 10px;
+    border-radius: 0 0 0 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.pricing-card.custom .btn {
+    background: transparent;
+    border: 2px solid #1b9cf1
+}
+
+.pricing-card .btn-contact {
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}

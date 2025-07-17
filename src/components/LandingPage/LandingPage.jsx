@@ -6,6 +6,7 @@ import FeaturesSection from "../FeaturePage/FeaturePage";
 import TestimonialsSection from "../TestimonialPage/TestimonialComponent";
 import FAQAccordion from "../FAQAcordion/FAQAccordion";
 import Footer from "../FooterPage/FooterPage";
+import PricingPlans from "../PricingPlan/PricingPlan";
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -51,6 +52,7 @@ const LandingPage = () => {
       </div>
       <FeaturesSection />
       <TestimonialsSection />
+      <PricingPlans />
       <FAQAccordion />
     </>
   );
