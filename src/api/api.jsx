@@ -90,7 +90,7 @@ export async function generateReport(prompt) {
     headers: {
       "Content-Type": "application/json",
     },
-    credentials: "include", // ⬅️ cookie-based auth
+    credentials: "include",
     body: JSON.stringify({ prompt }),
   });
 
@@ -112,7 +112,7 @@ export async function sendReport(email, pdfBlob) {
 
   const response = await fetch(`${baseUrl}/api/send-report`, {
     method: "POST",
-    credentials: "include", // ⬅️ cookie-based auth
+    credentials: "include",
     body: formData,
   });
 

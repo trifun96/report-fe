@@ -11,6 +11,7 @@ import ResetPassword from "./components/ResetPassword/ResetPassword";
 import ReportDisplay from "./components/ReportDisplay/ReportDisplay";
 import Footer from "./components/FooterPage/FooterPage";
 import ContactForm from "./components/ContactPage/ContactForm";
+import PricingPlans from "./components/PricingPlan/PricingPlan";
 import { ToastContainer } from "react-toastify";
 
 function App() {
@@ -57,6 +58,7 @@ function App() {
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password/:token" element={<ResetPassword />} />
         <Route path="/contact" element={<ContactForm />} />
+        <Route path="/subscribe" element={<PricingPlans />} />
       </Routes>
       <ReportDisplay
         report={report}
