@@ -90,7 +90,7 @@ export default function ReportComponent({
     try {
       await logoutUser();
       localStorage.removeItem("user");
-      navigate("/login");
+      navigate("/");
     } catch (error) {
       console.error("Logout error:", error);
     }
@@ -270,28 +270,32 @@ ${opis}
           </div>
 
           <div className="form-row button-row">
-       <Grid 
-  item 
-  xs={12} 
-  sm={6} 
-  style={{ 
-    display: 'flex', 
-    justifyContent: 'center', 
-    alignItems: 'center' ,
-    width:'100%',
-  }}
->
-  <Button
-    variant="outlined"
-    color="info"
-    style={{ backgroundColor: "white", color: "blue", width:"100%" }}
-    startIcon={listening ? <MicOffIcon /> : <MicIcon />}
-    onClick={toggleListening}
-  >
-    {listening ? "Zaustavi snimanje" : "Govori"}
-  </Button>
-</Grid>
-       <CustomButton loading={loading} onClick={handleSubmit} />
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                width: "100%",
+              }}
+            >
+              <Button
+                variant="outlined"
+                color="info"
+                style={{
+                  backgroundColor: "white",
+                  color: "black",
+                  width: "100%",
+                }}
+                startIcon={listening ? <MicOffIcon /> : <MicIcon />}
+                onClick={toggleListening}
+              >
+                {listening ? "Zaustavi snimanje" : "Govori"}
+              </Button>
+            </Grid>
+            <CustomButton loading={loading} onClick={handleSubmit} />
           </div>
         </form>
       </div>

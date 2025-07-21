@@ -5,17 +5,19 @@
   font-weight: 600;
   border: none;
   border-radius: 8px;
-  background: linear-gradient(135deg, #61dafb, #1b9cf1);
-  color: black;
+  background: linear-gradient(135deg, #bb743a, #f6b86a);
+  color: #3b3b3b;
   cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .custom-gradient-button:hover {
-  background: #1b9cf1;
-  color: white;
+  background: linear-gradient(135deg, #d99d4a, #ffc674);
+  color: #1b1b1b;
 }
 
 .custom-gradient-button:disabled {
   background: #bdbdbd;
   cursor: not-allowed;
+  color: #7a7a7a;
 }

@@ -66,6 +66,48 @@ export const logoutUser = async () => {
   }
 };
 
+export const getUserProfile = async () => {
+  try {
+    const res = await fetch(`${baseUrl}/api/user-profile`, {
+      method: "GET",
+      credentials: "include",
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      throw new Error(data.error || "Ne mogu da dobijem podatke o korisniku");
+    }
+
+    return data;
+  } catch (err) {
+    throw err;
+  }
+};
+
+export const uploadProfileImage = async (imageDataUrl) => {
+  try {
+    const res = await fetch(`${baseUrl}/api/upload-profile-image`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+      body: JSON.stringify({ image: imageDataUrl }),
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      throw new Error(data.error || "Greška prilikom slanja slike.");
+    }
+
+    return data;
+  } catch (err) {
+    throw err;
+  }
+};
+
 export const forgotPassword = async (email) => {
   const res = await fetch(`${baseUrl}/api/forgot-password`, {
     method: "POST",

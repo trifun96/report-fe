@@ -1,5 +1,5 @@
 .footer {
-  background-color: #121212;
+  background-color: #fdfdfc;
   color: #ccc;
   padding: 40px 20px 20px;
   font-family: 'Arial', sans-serif;
@@ -22,7 +22,7 @@
 }
 
 .footer-logo {
-  color: #61dafb;
+  color: #2b2b2b;
   font-size: 1.3rem;
   margin-bottom: 10px;
   margin-top: 10px;
@@ -31,6 +31,7 @@
 .footer-description {
   font-size: 0.95rem;
   line-height: 1.6;
+  color: #a24c27;
 }
 
 .footer-center h3,
@@ -50,7 +51,7 @@
 }
 
 .footer-center ul li a {
-  color: #cccccc;
+  color: #a24c27;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -61,7 +62,7 @@
 
 .footer-socials a {
   font-size: 1.5rem;
-  color: #ccc;
+  color: #0e0d0d;
   margin-right: 15px;
   transition: color 0.3s ease;
 }
@@ -74,7 +75,7 @@
   text-align: center;
   margin-top: 30px;
   font-size: 0.85rem;
-  color: #888;
+  color: #5a5a5a;
   border-top: 1px solid #333;
   padding-top: 15px;
 }

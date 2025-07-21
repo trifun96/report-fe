@@ -1,10 +1,13 @@
 .pricing-container {
-    background-color: #121212;
+    background: linearrgb(97, 60, 60)nt(
+      to bottom right, 
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 248, 230, 1) 80% 
+    );
     padding: 60px 20px;
     text-align: center;
-    color: white;
+    color: #2b2b2b;
 }
-
 .pricing-title {
     font-size: 2.5rem;
     margin-bottom: 40px;
@@ -27,6 +30,8 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .pricing-card:hover {
@@ -34,46 +39,104 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
+.pricing-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150%;
+    height: 60px;
+    background: linear-gradient(135deg, #a24c27 30%, transparent 80%);
+    border-radius: 100% / 50%;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 0;
+    transition: opacity 0.3s ease;
+}
+
+.pricing-card.popular::after {
+    background: linear-gradient(135deg, #1b9cf1 30%, transparent 80%);
+    opacity: 0.3;
+}
+
+.pricing-card:hover::after {
+    opacity: 0.4;
+}
+
 .pricing-card h3 {
     font-size: 1.6rem;
     margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
 }
 
 .pricing-card .price {
     font-size: 2rem;
     font-weight: bold;
     margin: 10px 0;
+    position: relative;
+    z-index: 2;
 }
 
 .pricing-card .reports {
     font-size: 1rem;
     margin-bottom: 15px;
     color: #bbbbbb;
+    position: relative;
+    z-index: 2;
 }
 
 .pricing-card .description {
     font-size: 0.95rem;
     margin-bottom: 20px;
     color: #dddddd;
+    position: relative;
+    z-index: 2;
 }
-
 .pricing-card .btn {
-    background: linear-gradient(135deg, #61dafb, #1b9cf1);
-    border: none;
-    padding: 12px 25px;
-    border-radius: 25px;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease;
+  background: linear-gradient(135deg, #a24c27 0%, #7d3416 100%);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 3px 8px rgba(162, 76, 39, 0.5);
 }
 
 .pricing-card .btn:hover {
-    background: linear-gradient(135deg, #61dafb, #1b9cf1);
+  background: linear-gradient(135deg, #7d3416 0%, #a24c27 100%);
+  color: #fff;
+  box-shadow: 0 6px 15px rgba(162, 76, 39, 0.7);
 }
 
-.pricing-card.popular {
-    border: 2px solid #1b9cf1;
+.pricing-card.popular .btn {
+  background: linear-gradient(135deg, #1b9cf1 0%, #61dafb 100%);
+  color: black;
+  box-shadow: 0 3px 8px rgba(27, 156, 241, 0.6);
+}
+
+.pricing-card.popular .btn:hover {
+  background: linear-gradient(135deg, #61dafb 0%, #1b9cf1 100%);
+  box-shadow: 0 6px 15px rgba(27, 156, 241, 0.9);
+  color: black;
+}
+
+.pricing-card.custom .btn {
+  background: transparent;
+  border: 2px solid #a24c27;
+  color: #a24c27;
+  box-shadow: none;
+}
+
+.pricing-card.custom .btn:hover {
+  background: #a24c27;
+  color: white;
+  box-shadow: 0 4px 12px rgba(162, 76, 39, 0.7);
 }
 
 .badge {
@@ -86,15 +149,30 @@
     border-radius: 0 0 0 8px;
     font-size: 0.8rem;
     font-weight: bold;
+    z-index: 3;
 }
 
 .pricing-card.custom .btn {
     background: transparent;
-    border: 2px solid #1b9cf1
+    border: 2px solid #1b9cf1;
+    color: white;
 }
 
 .pricing-card .btn-contact {
   color: white;
+}
+
+.features-list {
+  list-style:circle;
+  margin: 15px 0 25px 25px;
+  padding: 0;
+  color: #272323;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.feature-item {
+  margin-bottom: 6px;
 }
 
 @media screen and (max-width: 768px) {

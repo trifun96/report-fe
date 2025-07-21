@@ -1,5 +1,5 @@
 .faq-wrapper {
-  background-color: #121212;
+  background-color: #fdfdfc;
   color: #ffffff;
   padding: 50px;
   font-family: 'Arial', sans-serif;
@@ -10,6 +10,10 @@
   margin: 0 auto;
 }
 
+.faq-title{
+  color:#2b2b2b;
+}
+
 .faq-item {
   margin-bottom: 12px;
   border-bottom: 1px solid #333;
@@ -18,7 +22,7 @@
 .faq-question {
   background: none;
   border: none;
-  color: #00bfa6;
+  color: #a24c27;
   font-size: 1rem;
   text-align: left;
   width: 100%;
@@ -30,8 +34,8 @@
 
 .faq-answer {
   padding: 16px 18px;
-  background-color: #1e1e1e;
-  color: #ccc;
+  background-color: #a24c27;
+  color: #ffffff;
   font-size: 0.95rem;
   line-height: 1.6;
   text-align: justify;

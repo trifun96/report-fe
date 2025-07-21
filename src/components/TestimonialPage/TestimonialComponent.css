@@ -1,46 +1,51 @@
 .testimonials-section {
-  background-color: #121212;
-  color: #ffffff;
+  background: linear-gradient(135deg, #f9f6f2 0%, #f1eede 35%, #e5d4c0 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #2b2b2b;
   padding: 60px 50px;
   text-align: center;
 }
+
 
 .testimonials-title {
   font-size: 2.3rem;
   margin-bottom: 40px;
   font-weight: 800;
-  color: #ffffff;
+  color: #a24c27;
 }
-
 .testimonial-card {
-  background-color: #1e1e1e;
+  background-color: #f1eede; 
   border-radius: 14px;
   padding: 24px 20px;
   margin: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  min-height: 250px;
+  box-shadow: 0 4px 12px rgba(162, 76, 39, 0.1);
+  min-height: 290px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  min-height: 290px;
-  height: 280px;
+  border: 1px solid #d2c8b7;
+  color: #3b3b3b;
 }
 
 .testimonial-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 20px rgba(97, 218, 251, 0.2);
+  box-shadow: 0 10px 25px rgba(162, 76, 39, 0.35);
+  border-color: #a24c27;
+  background-color: #f9f6f2;
 }
 
 .quote-icon {
   font-size: 1.2rem;
-  color: #61dafb;
+  color: #a24c27;
   margin-bottom: 12px;
 }
 
 .testimonial-text {
   font-size: 1rem;
-  color: #dddddd;
+  color: #5a5a5a;
   line-height: 1.6;
   margin-bottom: 20px;
   overflow: hidden;
@@ -50,14 +55,13 @@
   -webkit-box-orient: vertical;
 }
 
-
 .testimonial-author {
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 600;
   font-size: 0.95rem;
-  color: #bbbbbb;
+  color: #6b6b6b;
   margin-top: auto;
   flex-direction: column;
 }
@@ -65,28 +69,28 @@
 .user-icon {
   font-size: 1.3rem;
   margin-right: 6px;
-  color: #61dafb;
+  color: #a24c27;
 }
 
 .author-name {
   font-weight: 600;
   font-size: 1rem;
-  color: #ffffff;
+  color: #2b2b2b;
 }
 
 .author-role {
   font-size: 0.85rem;
-  color: #bbbbbb;
+  color: #999999;
 }
 
 .slick-prev:before,
 .slick-next:before {
-  color: #61dafb;
+  color: #a24c27;
   font-size: 27px !important;
 }
 
 .slick-dots li button:before {
-  color: #61dafb;
+  color: #a24c27;
   font-size: 12px;
 }
 
@@ -103,9 +107,14 @@
 
   .testimonial-card {
     min-height: 350px;
+    height: auto;
   }
 
   .testimonials-section {
     padding: 60px 35px;
+  }
+
+  .testimonials-title {
+    font-size: 28px;
   }
 }

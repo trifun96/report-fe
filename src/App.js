@@ -12,6 +12,7 @@ import ReportDisplay from "./components/ReportDisplay/ReportDisplay";
 import Footer from "./components/FooterPage/FooterPage";
 import ContactForm from "./components/ContactPage/ContactForm";
 import PricingPlans from "./components/PricingPlan/PricingPlan";
+import ProfilePage from "./components/ProfilePage/ProfilePage";
 import { ToastContainer } from "react-toastify";
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
         <Route path="/reset-password/:token" element={<ResetPassword />} />
         <Route path="/contact" element={<ContactForm />} />
         <Route path="/subscribe" element={<PricingPlans />} />
+        <Route path="/profil" element={<ProfilePage/>} />
       </Routes>
       <ReportDisplay
         report={report}
@@ -66,8 +68,7 @@ function App() {
         email={email}
         clearReport={clearReport}
       />
-      <Footer></Footer>
-        <ToastContainer position="top-center" autoClose={3000} />
+      <ToastContainer position="top-center" autoClose={3000} />
     </div>
   );
 }

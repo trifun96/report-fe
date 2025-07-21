@@ -7,6 +7,11 @@ const plans = [
     price: "$9",
     reports: "100 izveštaja",
     description: "Idealan za pojedince i manje firme koje žele efikasnost.",
+    features: [
+      "Kreiranje strukturiranog izveštaja",
+      "Beleške",
+      "Slanje na mail direktno",
+    ],
   },
   {
     title: "Pro",
@@ -14,12 +19,22 @@ const plans = [
     reports: "250 izveštaja",
     description: "Za timove kojima je važna efikasnost",
     popular: true,
+    features: [
+      "Kreiranje strukturiranog izveštaja",
+      "Beleške",
+      "Slanje na mail direktno",
+    ],
   },
   {
     title: "Business",
     price: "$44",
     reports: "500 izveštaja",
     description: "Za profesionalce i zahtevnije korisnike",
+    features: [
+      "Kreiranje strukturiranog izveštaja",
+      "Beleške",
+      "Slanje na mail direktno",
+    ],
   },
   {
     title: "Po dogovoru",
@@ -27,6 +42,11 @@ const plans = [
     reports: "Više od 500 izveštaja",
     description: "Za veće sisteme i individualne potrebe",
     custom: true,
+    features: [
+      "Kreiranje strukturiranog izveštaja",
+      "Beleške",
+      "Slanje na mail direktno",
+    ],
   },
 ];
 
@@ -47,6 +67,15 @@ const PricingPlans = () => {
             <p className="price">{plan.price}</p>
             <p className="reports">{plan.reports}</p>
             <p className="description">{plan.description}</p>
+
+            <ul className="features-list">
+              {plan.features.map((feature, i) => (
+                <li key={i} className="feature-item">
+                  {feature}
+                </li>
+              ))}
+            </ul>
+
             <button className={`btn ${plan.custom ? "btn-contact" : ""}`}>
               {plan.custom ? "Kontakt" : "Izaberi plan"}
             </button>
