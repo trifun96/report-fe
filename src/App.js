@@ -60,7 +60,7 @@ function App() {
         <Route path="/reset-password/:token" element={<ResetPassword />} />
         <Route path="/contact" element={<ContactForm />} />
         <Route path="/subscribe" element={<PricingPlans />} />
-        <Route path="/profil" element={<ProfilePage/>} />
+        {/* <Route path="/profil" element={<ProfilePage/>} /> */}
       </Routes>
       <ReportDisplay
         report={report}

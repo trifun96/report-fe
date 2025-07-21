@@ -23,7 +23,7 @@ const Header = ({ user, onLogout }) => {
           <div className="dropdown">
             <div className="user-name">
               {user ? (
-                <a href="/profil" className="profile-link">
+                <a className="profile-link">
                   {user.name}
                 </a>
               ) : (

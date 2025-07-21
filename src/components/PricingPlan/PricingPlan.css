@@ -141,8 +141,8 @@
 
 .badge {
     position: absolute;
-    top: -10px;
-    right: -10px;
+    top: 0px;
+    right: 0px;
     background: linear-gradient(135deg, #61dafb, #1b9cf1);
     color: black;
     padding: 5px 10px;
@@ -153,7 +153,7 @@
 }
 
 .pricing-card.custom .btn {
-    background: transparent;
+    background: linear-gradient(135deg, #a24c27 0%, #7d3416 100%);
     border: 2px solid #1b9cf1;
     color: white;
 }
@@ -164,9 +164,9 @@
 
 .features-list {
   list-style:circle;
-  margin: 15px 0 25px 25px;
+  margin: 15px 0 25px 40px;
   padding: 0;
-  color: #272323;
+  color: white;
   font-size: 0.95rem;
   text-align: left;
 }

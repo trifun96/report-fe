@@ -4,7 +4,7 @@ import "./PricingPlan.css";
 const plans = [
   {
     title: "Start",
-    price: "$9",
+    price: "$12.99",
     reports: "100 izveštaja",
     description: "Idealan za pojedince i manje firme koje žele efikasnost.",
     features: [
@@ -15,7 +15,7 @@ const plans = [
   },
   {
     title: "Pro",
-    price: "$24",
+    price: "$22.99",
     reports: "250 izveštaja",
     description: "Za timove kojima je važna efikasnost",
     popular: true,
@@ -27,7 +27,7 @@ const plans = [
   },
   {
     title: "Business",
-    price: "$44",
+    price: "$48.99",
     reports: "500 izveštaja",
     description: "Za profesionalce i zahtevnije korisnike",
     features: [
