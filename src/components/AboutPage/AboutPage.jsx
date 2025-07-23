@@ -33,17 +33,18 @@ const AboutDocora = () => {
   papirologiju i podignu kvalitet svog poslovanja na viši nivo.
 </p>
           <ul className="about-features">
+            <p>Kako ti Docora pomaže:</p>
             <li>
-              <FaMicrophone /> Pretvoriti govor u tekst
+              <FaMicrophone /> Pretvara govor u tekst
             </li>
             <li>
-              <FaFilePdf /> Strukturirati informacije
+              <FaFilePdf /> Strukturira izveštaj
             </li>
             <li>
-              <FaClock /> Generisati PDF
+              <FaClock /> Generiše PDF
             </li>
             <li>
-              <FaPaperPlane /> Poslati izveštaj gde ti želiš
+              <FaPaperPlane /> Šalje izveštaj gde ti želiš (gmail, viber)
             </li>
           </ul>
 

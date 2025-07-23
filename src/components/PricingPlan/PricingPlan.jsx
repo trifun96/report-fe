@@ -75,7 +75,7 @@ const PricingPlans = () => {
           >
             {plan.popular && <div className="badge">Najpopularnije</div>}
             <h3>{plan.title}</h3>
-            <p className="price">{plan.price}</p>
+            <h6 className="price">{plan.price}</h6>
             <p className="reports">{plan.reports}</p>
             <p className="description">{plan.description}</p>
 

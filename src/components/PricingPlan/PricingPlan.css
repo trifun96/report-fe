@@ -16,6 +16,8 @@
      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
 }
 
+h6{color:white}
+
 .pricing-cards {
     display: flex;
     flex-wrap: wrap;
