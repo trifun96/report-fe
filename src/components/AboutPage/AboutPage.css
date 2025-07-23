@@ -1,0 +1,142 @@
+.about-docora-wrapper {
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 60px 30px;
+    background: #ffffff;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about-docora-title {
+    text-align: center;
+    font-size: 46px;
+    font-weight: 800;
+    color: #a24c27;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    margin-bottom: 40px;
+    line-height: 1.2;
+}
+
+.about-content {
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    gap: 60px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.about-left {
+    flex: 1 1 60%;
+    color: #3a2e22;
+    line-height: 1.75;
+    letter-spacing: 0.03em;
+}
+
+.about-left p {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+    color: #4a3c2b;
+}
+
+.about-left strong {
+    color: #a24c27;
+    font-weight: 700;
+}
+
+.about-features {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.2rem;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.about-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #4a3c2b;
+    font-weight: 600;
+}
+
+.about-features li svg {
+    color: #a24c27;
+    font-size: 1.3rem;
+}
+
+.btn-start {
+    background-color: #a24c27;
+    color: white;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 30px;
+    box-shadow: 0 6px 12px rgb(162 76 39 / 0.45);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-start:hover {
+    background-color: #873d1f;
+    box-shadow: 0 8px 16px rgb(135 61 31 / 0.7);
+}
+
+.about-right {
+    flex: 1 1 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 40px;
+}
+
+.about-right img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 2px solid rgba(162, 76, 39, 0.3);
+    transition: transform 0.25s ease, border-color 0.3s ease;
+}
+
+.about-right img:hover {
+    transform: scale(1.1);
+    border-color: #a24c27;
+}
+
+@media (max-width: 900px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-right {
+        flex-direction: row;
+        gap: 30px;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .about-right img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .about-docora-title {
+        font-size: 36px;
+    }
+
+    .btn-start {
+        align-self: center;
+    }
+
+    .about-features li {
+        justify-content: flex-start;
+        text-align: left;
+    }
+}

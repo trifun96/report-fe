@@ -6,6 +6,7 @@ import TestimonialsSection from "../TestimonialPage/TestimonialComponent";
 import FAQAccordion from "../FAQAcordion/FAQAccordion";
 import Footer from "../FooterPage/FooterPage";
 import PricingPlans from "../PricingPlan/PricingPlan";
+import AboutDocora from "../AboutPage/AboutPage";
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -49,6 +50,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+      <AboutDocora/>
       <FeaturesSection />
       <TestimonialsSection />
       <PricingPlans />

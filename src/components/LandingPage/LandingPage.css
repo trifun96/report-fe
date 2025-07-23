@@ -40,7 +40,7 @@
 
 .landing-title span {
   color: #cc8212;
-  font-style: italic;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
 }
 
 .landing-subtitle {
@@ -164,6 +164,12 @@
 @media (max-width: 1600px) {
   .landing-background {
     padding: 45px;
+  }
+}
+
+@media (max-width: 1350px) {
+  .landing-background {
+    margin-top: 75px;
   }
 }
 
