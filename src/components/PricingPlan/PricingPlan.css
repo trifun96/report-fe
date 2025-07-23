@@ -9,9 +9,10 @@
     color: #2b2b2b;
 }
 .pricing-title {
-    font-size: 2.5rem;
+    font-size: 50px;
+    font-weight: 800;
     margin-bottom: 40px;
-    color: #ffffff;
+    color: #a24c27;
 }
 
 .pricing-cards {
@@ -179,5 +180,9 @@
     .pricing-cards {
         flex-direction: column;
         align-items: center;
+    }
+
+    .pricing-title{
+      font-size: 35px;
     }
 }

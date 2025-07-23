@@ -10,8 +10,14 @@
   margin: 0 auto;
 }
 
-.faq-title{
-  color:#2b2b2b;
+.faq-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #a24c27;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -1px;
+  line-height: 1.2;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
 }
 
 .faq-item {
@@ -42,14 +48,18 @@
   border-radius: 4px;
   margin-top: 8px;
 }
-
 @media (max-width: 480px) {
   .faq-question {
     font-size: 0.95rem;
   }
 
+  .faq-title{
+    font-size: 35px;
+  }
+
   .faq-answer {
     font-size: 0.9rem;
     padding: 10px 10px;
+    text-align: left;
   }
 }

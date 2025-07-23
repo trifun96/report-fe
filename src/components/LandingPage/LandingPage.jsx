@@ -20,9 +20,9 @@ const LandingPage = () => {
               Govorite – Docora beleži. <span>Brzo. Profesionalno.</span>
             </h1>
             <p className="landing-subtitle">
-              Docora je savremena aplikacija za automatsko kreiranje
-              profesionalnih i strukturiranih izveštaja i beleški pomoću
-              glasovnih komandi.
+              Uštedite vreme. Docora je savremena aplikacija za automatsko
+              kreiranje profesionalnih i strukturiranih izveštaja i beleški
+              pomoću glasovnih komandi.
             </p>
             <div className="landing-benefits">
               <p>

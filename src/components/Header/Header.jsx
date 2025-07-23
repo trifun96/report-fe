@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { FaUserCircle } from "react-icons/fa";
 import { UserRound } from "lucide-react";
 import logo from "../../images/docora-logo.png";
 import "./Header.css";
