@@ -22,16 +22,17 @@
 }
 
 .footer-logo {
-  color: #2b2b2b;
-  font-size: 1.3rem;
+  color: #a24c27;
+  font-size: 35px;
   margin-bottom: 10px;
   margin-top: 10px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
 }
 
 .footer-description {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #a24c27;
+  color: #5a5a5a;
 }
 
 .footer-center h3,
@@ -51,7 +52,7 @@
 }
 
 .footer-center ul li a {
-  color: #a24c27;
+  color: #5a5a5a;
   text-decoration: none;
   transition: color 0.3s ease;
 }

@@ -13,9 +13,11 @@
   margin-bottom: 40px;
   font-weight: 800;
   color: #a24c27;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
 }
+
 .testimonial-card {
-  background-color: #f1eede; 
+  background-color: #f1eede;
   border-radius: 14px;
   padding: 24px 20px;
   margin: 16px;

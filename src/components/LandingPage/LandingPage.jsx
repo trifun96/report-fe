@@ -41,7 +41,7 @@ const LandingPage = () => {
             <div className="phone-mockup">
               <div className="phone-top-speaker"></div>
               <div className="phone-screen">
-                <p>Ovde možeš prikazati preview aplikacije</p>
+                <p>Docora, brat moj!</p>
               </div>
               <div className="phone-home-button"></div>
             </div>

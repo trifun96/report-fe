@@ -3,10 +3,10 @@
   color: #222;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
-  min-height: 100vh; 
-  padding: 40px 20px;
+  min-height: 100vh;
+  padding: 40px 0px;
   position: relative;
   box-sizing: border-box;
 }
@@ -21,8 +21,8 @@
   width: 100%;
   position: relative;
   z-index: 1;
-  margin-top: 20px; 
-  margin-bottom: 20px; 
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .landing-overlay {
@@ -35,7 +35,7 @@
   font-weight: 800;
   margin-bottom: 20px;
   color: #2b2b2b;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
 }
 
 .landing-title span {
@@ -52,7 +52,7 @@
 
 .landing-benefits p {
   font-size: 1.05rem;
-  color: #6b6b6b;
+  color: #000000;
   line-height: 1.8;
   margin-bottom: 36px;
   max-width: 520px;
@@ -83,7 +83,7 @@
   height: 100px;
   background: #a24c27;
   border-radius: 50% / 100%;
-  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
   z-index: 0;
 }
 
@@ -100,7 +100,7 @@
   align-items: center;
   padding: 20px 20px 40px;
   box-sizing: border-box;
-  z-index: 2; 
+  z-index: 2;
 }
 
 .phone-top-speaker {
@@ -171,12 +171,14 @@
   .landing-content {
     flex-direction: column;
     text-align: center;
+    justify-content: center;
     gap: 40px;
-    padding: 60px 20px;
+    padding: 60px 15px;
   }
 
-  .landing-background{
-    margin-top: 60px;
+  .landing-background {
+    margin-top: 100px;
+    padding: 0px;
   }
 
   .landing-overlay {
@@ -191,11 +193,11 @@
     font-size: 2.2rem;
   }
 
-  .landing-subtitle{
+  .landing-subtitle {
     font-size: 1.05rem;
   }
 
-  .landing-benefits{
+  .landing-benefits {
     display: flex;
     justify-content: center;
   }

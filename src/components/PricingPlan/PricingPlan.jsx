@@ -1,61 +1,70 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./PricingPlan.css";
 
 const plans = [
   {
     title: "Start",
-    price: "$12.99",
-    reports: "100 izveštaja",
-    description: "Idealan za pojedince i manje firme koje žele efikasnost.",
+    price: "$8,99",
+    reports: "100 izveštaja mesečno",
+    description: "Savršen plan za svakodnevnu i ličnu upotrebu.",
     features: [
-      "Kreiranje strukturiranog izveštaja",
-      "Beleške",
-      "Slanje na mail direktno",
+      "Kreiranje strukturisanih izveštaja",
+      "Dodavanje beleški",
+      "Slanje izveštaja na email",
     ],
   },
   {
     title: "Pro",
-    price: "$22.99",
-    reports: "250 izveštaja",
-    description: "Za timove kojima je važna efikasnost",
+    price: "$17.99",
+    reports: "250 izveštaja mesečno",
+    description: "Za profesionalce kojima je potrebna veća fleksibilnost.",
     popular: true,
     features: [
-      "Kreiranje strukturiranog izveštaja",
-      "Beleške",
-      "Slanje na mail direktno",
+      "Kreiranje strukturisanih izveštaja",
+      "Dodavanje beleški",
+      "Slanje izveštaja na email",
     ],
   },
   {
     title: "Business",
-    price: "$48.99",
-    reports: "500 izveštaja",
-    description: "Za profesionalce i zahtevnije korisnike",
+    price: "$37.99",
+    reports: "500 izveštaja mesečno",
+    description: "Za timove, firme i intenzivnu upotrebu.",
     features: [
-      "Kreiranje strukturiranog izveštaja",
-      "Beleške",
-      "Slanje na mail direktno",
+      "Kreiranje strukturisanih izveštaja",
+      "Dodavanje beleški",
+      "Slanje izveštaja na email",
     ],
   },
   {
     title: "Po dogovoru",
-    price: "Kontaktiraj nas",
-    reports: "Više od 500 izveštaja",
-    description: "Za veće sisteme i individualne potrebe",
+    reports: "Prilagođeni broj izveštaja prema vašim potrebama",
     custom: true,
+    description: "Idealno za korisnike sa specifičnim zahtevima i većim obimom rada.",
     features: [
-      "Kreiranje strukturiranog izveštaja",
-      "Beleške",
-      "Slanje na mail direktno",
+      "Kreiranje strukturisanih izveštaja",
+      "Slanje izveštaja na email",
+      "Prioritetna podrška",
+      "Fleksibilni uslovi korišćenja",
     ],
   },
 ];
 
 const PricingPlans = () => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = (plan) => {
+    if (plan.custom) {
+      navigate("/contact");
+    } else {
+      alert(`Izabrali ste plan: ${plan.title}`);
+    }
+  };
+
   return (
     <div className="pricing-container">
-      <h2 className="pricing-title">
-      Docora je tu za tebe. Odaberi plan.
-      </h2>
+      <h2 className="pricing-title">Docora je tu za tebe. Odaberi plan.</h2>
       <div className="pricing-cards">
         {plans.map((plan, index) => (
           <div
@@ -78,7 +87,10 @@ const PricingPlans = () => {
               ))}
             </ul>
 
-            <button className={`btn ${plan.custom ? "btn-contact" : ""}`}>
+            <button
+              className={`btn ${plan.custom ? "btn-contact" : ""}`}
+              onClick={() => handleButtonClick(plan)}
+            >
               {plan.custom ? "Kontakt" : "Izaberi plan"}
             </button>
           </div>

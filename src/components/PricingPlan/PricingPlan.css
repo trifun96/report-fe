@@ -10,9 +10,10 @@
 }
 .pricing-title {
     font-size: 50px;
-    font-weight: 800;
     margin-bottom: 40px;
     color: #a24c27;
+    font-weight: 800;
+     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
 }
 
 .pricing-cards {
