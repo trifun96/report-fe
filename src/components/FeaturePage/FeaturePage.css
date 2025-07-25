@@ -1,28 +1,20 @@
 .features-section {
-  background: linear-gradient(
-    135deg,
-    #fff4e6 0%,
-    #ffd1a4 30%,
-    #ffb878 65%,
-    #f89b55 100%
-  );
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: white;
   color: #2b2b2b;
   text-align: center;
   margin: 0 auto;
-  padding: 1px 20px 50px 0px;
+  padding: 1px 20px 40px 0px;
   position: relative;
 }
 
-
 .features-title {
-  font-size: 50px;
+  font-size: 40px;
   margin-bottom: 50px;
-  font-weight: 700;
+  font-weight: 600;
   color: #a24c27;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
 }
+
 .features-grid {
   display: flex;
   flex-wrap: wrap;
@@ -31,27 +23,27 @@
 }
 
 .feature-card {
-  background-color: #f1eede;
-  border: 1px solid #d2c8b7;
+  background-color: #f9f9f9;
+  border: 2px solid #e1e1e1;
   padding: 30px;
   border-radius: 16px;
   width: 260px;
-  box-shadow: 0 2px 10px rgba(162, 76, 39, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   color: #3b3b3b;
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(162, 76, 39, 0.35);
-  border-color: #a24c27;
-  background-color: #f9f6f2;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-color: #5a4bda;
+  background-color: #ffffff;
 }
 
 .feature-icon {
   font-size: 40px;
   margin-bottom: 20px;
-  color: #cc8212;
+  color: #5a4bda;
 }
 
 .feature-title {
@@ -62,7 +54,7 @@
 }
 
 .feature-description {
-  font-size: 14px;
+  font-size: 1rem;
   color: #5a5a5a;
   line-height: 1.6;
 }
@@ -74,10 +66,10 @@
   }
 
   .features-title {
-    font-size: 35px;
+    font-size: 28px;
   }
 
   .features-section {
-    padding: 20px 20px 80px 20px;
+    padding: 20px 20px 30px 20px;
   }
 }

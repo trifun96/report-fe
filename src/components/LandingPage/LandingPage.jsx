@@ -1,56 +1,54 @@
 import { useNavigate } from "react-router-dom";
 import "./LandingPage.css";
-import Logo from "../Logo/Logo";
 import FeaturesSection from "../FeaturePage/FeaturePage";
 import TestimonialsSection from "../TestimonialPage/TestimonialComponent";
 import FAQAccordion from "../FAQAcordion/FAQAccordion";
 import Footer from "../FooterPage/FooterPage";
 import PricingPlans from "../PricingPlan/PricingPlan";
 import AboutDocora from "../AboutPage/AboutPage";
+import Header from "../Header/Header";
 
 const LandingPage = () => {
   const navigate = useNavigate();
 
   return (
     <>
-      <Logo />
-      <div className="landing-background">
-        <div className="landing-content">
-          <div className="landing-overlay">
-            <h1 className="landing-title">
-              Govorite – Docora beleži. <span>Brzo. Profesionalno.</span>
-            </h1>
-            <p className="landing-subtitle">
-              Uštedite vreme. Docora je savremena aplikacija za automatsko
-              kreiranje profesionalnih i strukturiranih izveštaja i beleški
-              pomoću glasovnih komandi.
-            </p>
-            <div className="landing-benefits">
-              <p>
-                Pretvarajte govor u PDF izveštaje i šaljite ih direktno na email
-                – sve iz jedne aplikacije.
-              </p>
-            </div>
+      <Header />
+      <section className="landing-hero">
+        <div className="landing-hero-content">
+          <h1 className="landing-title">
+            Pretvorite glas u <span>stručne izveštaje</span> <br /> brzo i lako.
+          </h1>
+          <p className="landing-subtitle">
+            Docora vam pomaže da kreirate profesionalne i detaljne izveštaje
+            koristeći samo glas. Brzo, jednostavno i bez kucanja. Kreirajte PDF
+            izveštaj u par klikova i pošaljite ga gde god želite — direktno iz
+            aplikacije. Vi govorite – Docora zapisuje, formatira i šalje.
+          </p>
+          <p className="landing-subtitle">
+            Uštedite vreme, poboljšajte efikasnost i budite ispred konkurencije.
+          </p>
+          <div className="landing-buttons-wrapper">
             <button
               className="landing-button"
-              onClick={() => navigate("/login")}
+              onClick={() => navigate("/signup")}
+              aria-label="Započni besplatno"
             >
               Započni besplatno
             </button>
-          </div>
-          <div className="landing-image-container">
-            <div className="phone-mockup">
-              <div className="phone-top-speaker"></div>
-              <div className="phone-screen">
-                <p>Docora, brat moj!</p>
-              </div>
-              <div className="phone-home-button"></div>
-            </div>
-            <div className="bg-wave-shape"></div>
+
+            <button
+              className="contact-button"
+              onClick={() => navigate("/contact")}
+              aria-label="Kontakt"
+            >
+              Kontakt
+            </button>
           </div>
         </div>
-      </div>
-      <AboutDocora/>
+      </section>
+
+      <AboutDocora />
       <FeaturesSection />
       <TestimonialsSection />
       <PricingPlans />

@@ -1,372 +1,147 @@
-.landing-background {
-  background-color: #fdfdfc;
-  color: #222;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --color-text-dark: #111111;
+  --color-text-muted: #555555;
+  --color-accent: #5a4bda;
+  --color-button-bg: #5a4bda;
+  --color-button-bg-hover: #4538a0;
+  --color-button-text: #ffffff;
+  --font-main: 'Poppins', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  background-color: #fff;
+  color: var(--color-text-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.landing-hero {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 40px 0px;
-  position: relative;
-  box-sizing: border-box;
-}
-
-.landing-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 60px;
-  flex-wrap: wrap;
-  max-width: 1400px;
-  width: 100%;
-  position: relative;
-  z-index: 1;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.landing-overlay {
-  flex: 1;
-  text-align: left;
-}
-
-.landing-title {
-  font-size: 2.9rem;
-  font-weight: 800;
-  margin-bottom: 20px;
-  color: #2b2b2b;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
-}
-
-.landing-title span {
-  color: #cc8212;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
-}
-
-p{
-      font-size: 1.2rem;
-    margin-bottom: 18px;
-    color: #4a3c2b;
-}
-
-.landing-button {
-  background-color: #a24c27;
-  color: white;
-  font-size: 1rem;
-  padding: 14px 32px;
-  border: none;
-  border-radius: 10px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.landing-button:hover {
-  background-color: #7d3416;
-}
-
-.bg-wave-shape {
-  position: absolute;
-  bottom: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 320px;
-  height: 100px;
-  background: #a24c27;
-  border-radius: 50% / 100%;
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
-  z-index: 0;
-}
-
-
-.phone-mockup {
-  width: 280px;
-  height: 500px;
-  background: #222;
-  border-radius: 50px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 20px 40px;
-  box-sizing: border-box;
-  z-index: 2;
-}
-
-.phone-top-speaker {
-  width: 60px;
-  height: 6px;
-  background: #555;
-  border-radius: 4px;
-  margin-bottom: 15px;
-  margin-top: 8px;
-}
-
-.phone-screen {
-  flex: 1;
-  width: 100%;
-  background: white;
-  border-radius: 30px;
-  box-shadow: inset 0 0 10px #ccc;
-  padding: 20px;
-  color: #666;
-  font-size: 1rem;
-  overflow-y: auto;
+  padding: 0px 20px 60px;
   text-align: center;
 }
 
-.phone-home-button {
-  width: 60px;
-  height: 60px;
-  background: #555;
-  border-radius: 50%;
-  margin-top: 20px;
-  box-shadow: inset 0 4px 0 0 #777;
-  cursor: default;
+.landing-hero-content {
+  max-width: 800px;
+  width: 100%;
 }
 
+.landing-title {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
 
-.landing-image-container {
-  flex: 1;
-  position: relative;
+.landing-title span {
+  color: var(--color-accent);
+}
+
+.landing-subtitle {
+  font-size: 20px;
+  color: #5a5a5a;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.landing-buttons-wrapper {
   display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   justify-content: center;
-  align-items: center;
+  margin-top: 20px;
 }
 
-.landing-image {
-  width: 360px;
-  z-index: 2;
-  position: relative;
+.landing-button {
+  background-color: #5a4bda;
+  color: white;
+  font-size: 18px;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.image-bg-shape {
-  position: absolute;
-  background-color: #c98d2d;
-  width: 380px;
-  height: 420px;
-  top: 30px;
-  left: 20px;
-  z-index: 1;
-  clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
+.landing-button:hover {
+ background-color: #5a4bda;
+  transform: scale(1.05);
 }
 
-@media (max-width: 1600px) {
-  .landing-background {
-    padding: 45px;
-  }
+.contact-button {
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 14px 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  min-width: 160px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 1350px) {
-  .landing-background {
-    margin-top: 60px;
-  }
+.contact-button:hover {
+  background-color: #dac5c5;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width: 1024px) {
-  .landing-content {
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    gap: 40px;
-    padding: 30px 15px;
-  }
-
-  .landing-background {
-    margin-top: 100px;
-    padding: 0px;
-  }
-
-  .landing-overlay {
-    text-align: center;
-  }
-
-  .landing-image-container {
-    justify-content: center;
-  }
-
+@media (max-width: 768px) {
+  
   .landing-title {
     font-size: 2.2rem;
   }
 
-  .image-bg-shape {
-    width: 300px;
-    height: 340px;
-    top: 20px;
-    left: auto;
+  .landing-subtitle {
+    font-size: 1.05rem;
   }
-}
 
-@media (max-width: 768px) {
   .landing-button {
-    padding: 12px 28px;
-    font-size: 0.95rem;
-  }
-
-  .landing-title {
-    font-size: 1.9rem;
-  }
-
-  .landing-image-container {
-    width: 250px;
-    height: 400px;
-  }
-
-  .phone-mockup {
-    width: 250px;
-    height: 400px;
-    padding: 18px 18px 35px;
-    border-radius: 40px;
-  }
-
-  .phone-top-speaker {
-    width: 50px;
-    height: 5px;
-    margin-bottom: 12px;
-    margin-top: 7px;
-  }
-
-  .phone-screen {
-    font-size: 0.95rem;
-    padding: 18px;
-    border-radius: 25px;
-  }
-
-  .phone-home-button {
-    width: 50px;
-    height: 50px;
-    margin-top: 18px;
+    font-size: 1rem;
+    padding: 12px 32px;
   }
 }
 
 @media (max-width: 480px) {
-  .landing-button {
-    padding: 11px 26px;
-    font-size: 16px;
-  }
 
+  .landing-hero{
+    margin-top: 10px;
+  }
   .landing-title {
     font-size: 1.8rem;
   }
 
-  .landing-image-container {
-    width: 200px;
-    height: 350px;
+  .landing-subtitle {
+    font-size: 1rem;
   }
 
-  .phone-mockup {
-    width: 200px;
-    height: 350px;
-    padding: 15px 15px 30px;
-    border-radius: 35px;
-  }
-
-  .phone-top-speaker {
-    width: 45px;
-    height: 5px;
-    margin-bottom: 10px;
-    margin-top: 6px;
-  }
-
-  .phone-screen {
-    font-size: 0.85rem;
-    padding: 15px;
-    border-radius: 22px;
-  }
-
-  .phone-home-button {
-    width: 45px;
-    height: 45px;
-    margin-top: 15px;
-  }
-}
-
-@media (max-width: 360px) {
-  .landing-button {
-    padding: 10px 24px;
-    font-size: 15px;
-  }
-
-  .landing-image-container {
-    width: 180px;
-    height: 300px;
-  }
-
-  .phone-mockup {
-    width: 180px;
-    height: 300px;
-    padding: 12px 12px 25px;
-    border-radius: 30px;
-  }
-
-  .phone-top-speaker {
-    width: 40px;
-    height: 4px;
-    margin-bottom: 9px;
-    margin-top: 5px;
-  }
-
-  .phone-screen {
-    font-size: 0.8rem;
-    padding: 12px;
-    border-radius: 20px;
-  }
-
-  .phone-home-button {
-    width: 40px;
-    height: 40px;
-    margin-top: 12px;
-  }
-}
-
-@media (max-width: 300px) {
-  .landing-content {
+  .landing-buttons-wrapper {
     flex-direction: column;
-    gap: 30px;
-    padding: 30px 15px;
+    gap: 12px;
+    align-items: center; 
   }
 
-  .landing-overlay {
-    flex: none;
-    width: 100%;
+  .landing-button,
+  .contact-button {
+    width: 70%;
+    min-width: unset;
   }
 
-  .landing-button {
-    font-size: 0.9rem;
-    padding: 10px 24px;
-  }
-
-  .landing-image-container {
-    flex: none;
-    width: 180px;
-    height: 300px;
-    margin: 0 auto;
-  }
-
-  .phone-mockup {
-    width: 180px;
-    height: 300px;
-    padding: 15px 15px 30px;
-    border-radius: 30px;
-  }
-
-  .phone-top-speaker {
-    width: 40px;
-    height: 5px;
-    margin-bottom: 10px;
-    margin-top: 6px;
-  }
-
-  .phone-screen {
-    font-size: 0.85rem;
-    padding: 15px;
-    border-radius: 20px;
-  }
-
-  .phone-home-button {
-    width: 40px;
-    height: 40px;
-    margin-top: 15px;
+  .contact-button{
+    padding: 11px 40px;
   }
 }
+
+

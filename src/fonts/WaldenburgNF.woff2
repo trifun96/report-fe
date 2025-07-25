@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'Waldenburg NF';
+  src: url('./fonts/WaldenburgNF.woff2') format('woff2'),
+       url('./fonts/WaldenburgNF.woff') format('woff'),
+       url('./fonts/WaldenburgNF.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Waldenburg Semi';
+  src: url('/fonts/Waldenburg-Semi.otf') format('opentype');
+  font-weight: 600; /* ili 500, zavisno kako je definisano */
+  font-style: normal;
+}
+

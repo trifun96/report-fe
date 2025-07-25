@@ -79,7 +79,7 @@ const TestimonialsSection = () => {
               <FaQuoteLeft className="quote-icon" />
               <p className="testimonial-text">"{item.quote}"</p>
               <div className="testimonial-author">
-                <HiOutlineUserCircle className="user-icon" />
+                <HiOutlineUserCircle className="icon" />
                 <div>
                   <div className="author-name">{item.name}</div>
                   <div className="author-role">{item.role}</div>

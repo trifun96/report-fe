@@ -49,6 +49,12 @@ const ContactForm = () => {
       <div className="contact-form-container">
         <form onSubmit={handleSubmit}>
           <h2>Kontaktirajte nas</h2>
+          <p style={{ color: "#2B2B2B" }}>
+            Imate pitanja, predloge ili želite posebnu ponudu prilagođenu vašim
+            potrebama? Pišite nam putem forme ispod – tu smo da vam pomognemo
+            što je brže moguće.
+          </p>
+
           <input
             type="text"
             name="name"
@@ -77,8 +83,8 @@ const ContactForm = () => {
               padding: "12px 16px",
               borderRadius: "12px",
               background: "rgba(255,255,255,0.06)",
-              border: "none",
-              color: "#fff",
+              border: "1px solid #c8c9f3;",
+              color: "black",
               fontSize: "1rem",
             }}
           />

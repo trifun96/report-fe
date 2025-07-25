@@ -4,8 +4,19 @@ import "./PricingPlan.css";
 
 const plans = [
   {
+    title: "Free",
+    price: "$0",
+    reports: "10 izveštaja",
+    description: "Osnovni plan za testiranje i povremeno korišćenje.",
+    features: [
+      "Kreiranje strukturisanih izveštaja",
+      "Dodavanje beleški",
+      "Slanje izveštaja na email",
+    ],
+  },
+  {
     title: "Start",
-    price: "$8,99",
+    price: "$11,99",
     reports: "100 izveštaja mesečno",
     description: "Savršen plan za svakodnevnu i ličnu upotrebu.",
     features: [
@@ -16,7 +27,7 @@ const plans = [
   },
   {
     title: "Pro",
-    price: "$17.99",
+    price: "$23.99",
     reports: "250 izveštaja mesečno",
     description: "Za profesionalce kojima je potrebna veća fleksibilnost.",
     popular: true,
@@ -28,25 +39,13 @@ const plans = [
   },
   {
     title: "Business",
-    price: "$37.99",
+    price: "$45.99",
     reports: "500 izveštaja mesečno",
     description: "Za timove, firme i intenzivnu upotrebu.",
     features: [
       "Kreiranje strukturisanih izveštaja",
       "Dodavanje beleški",
       "Slanje izveštaja na email",
-    ],
-  },
-  {
-    title: "Po dogovoru",
-    reports: "Prilagođeni broj izveštaja prema vašim potrebama",
-    custom: true,
-    description: "Idealno za korisnike sa specifičnim zahtevima i većim obimom rada.",
-    features: [
-      "Kreiranje strukturisanih izveštaja",
-      "Slanje izveštaja na email",
-      "Prioritetna podrška",
-      "Fleksibilni uslovi korišćenja",
     ],
   },
 ];

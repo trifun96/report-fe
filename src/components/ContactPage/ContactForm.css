@@ -1,12 +1,6 @@
 .contact-form-container {
   min-height: 100dvh;
-  background: linear-gradient(
-    135deg,
-    #fff8eb 70%,
-    #ffe3b8 60%,
-    #ffcd91 70%, 
-    #f9a858 75%
-  );
+  background: linear-gradient(135deg, #ffffff 50%, #e9eaff 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,13 +13,13 @@
 .contact-form-container form {
   position: relative;
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.95);
+    background-color: #e9ebf5;
   border-radius: 20px;
   padding: 25px 40px;
   width: 100%;
   max-width: 480px;
   backdrop-filter: blur(16px);
-  box-shadow: 0 20px 50px rgba(162, 76, 39, 0.1);
+  box-shadow: 0 20px 50px rgba(90, 75, 218, 0.1);
   animation: fadeIn 0.8s ease-out;
   text-align: center;
   display: flex;
@@ -35,21 +29,21 @@
 }
 
 .contact-form-container h2 {
-  color: #bb743a;
+  color: #5a4bda;
   font-size: 2rem;
   margin-bottom: 10px;
   font-weight: 700;
-  text-shadow: 1px 1px 2px rgba(187, 116, 58, 0.3);
+  text-shadow: 1px 1px 2px rgba(90, 75, 218, 0.2);
 }
 
 .contact-form-container input,
 .contact-form-container textarea {
   width: 100%;
   padding: 12px 16px;
-  background: #fff9f2;
-  border: 1px solid #e6d5b8;
+  background: #f6f7ff;
+  border: 1px solid #c8c9f3;
   border-radius: 12px;
-  color: #4a4a4a;
+  color: #2b2b2b;
   font-size: 1rem;
   transition: background 0.3s ease, border-color 0.3s ease;
   font-family: inherit;
@@ -57,14 +51,14 @@
 
 .contact-form-container input::placeholder,
 .contact-form-container textarea::placeholder {
-  color: #bb743a;
+  color: #5a4bda;
 }
 
 .contact-form-container input:focus,
 .contact-form-container textarea:focus {
   outline: none;
-  background: #fff4db;
-  border-color: #bb743a;
+  background: #eef0ff;
+  border-color: #5a4bda;
 }
 
 .contact-form-container textarea {
@@ -75,25 +69,25 @@
 .contact-form-container button {
   width: 100%;
   padding: 12px;
-  background: linear-gradient(135deg, #d99d4a 30%, #f6b86a 100%);
+  background: linear-gradient(135deg, #5a4bda, #4538a0);
   color: white;
   font-weight: 700;
   font-size: 1.1rem;
   border: none;
   border-radius: 40px;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(187, 116, 58, 0.3);
+  box-shadow: 0 4px 12px rgba(90, 75, 218, 0.4);
   transition: all 0.3s ease;
 }
 
 .contact-form-container button:hover {
-  background: linear-gradient(135deg, #e6b75a 30%, #ffc674 100%);
+  background: linear-gradient(135deg, #4538a0, #5a4bda);
   color: white;
-  box-shadow: 0 6px 20px rgba(187, 116, 58, 0.5);
+  box-shadow: 0 6px 20px rgba(90, 75, 218, 0.6);
 }
 
 .contact-form-container p {
-  color: #bb743a;
+  color: #5a4bda;
   margin-top: 5px;
   font-size: 0.95rem;
   text-align: center;
@@ -101,7 +95,7 @@
 }
 
 .my-toast {
-  background: #383636 !important;  
+  background: #2d2c35 !important;
   color: white !important;
   font-weight: bold;
   border-radius: 8px;
@@ -116,6 +110,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

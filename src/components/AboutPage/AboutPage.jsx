@@ -10,28 +10,26 @@ const AboutDocora = () => {
 
   return (
     <div className="about-docora-wrapper">
-      <h2 className="about-docora-title">
-        Kreiraj izveštaj u par jednostavnih koraka
-      </h2>
-
       <div className="about-content">
         <div className="about-left">
-    <p>
-  <strong>Docora</strong> je inovativni alat koji ti omogućava da brzo i
-  efikasno kreiraš profesionalne PDF izveštaje i beleške koristeći samo
-  glasovne komande. Uz minimalan trud, štediš dragoceno vreme i pojednostavljuješ
-  svakodnevne obaveze.
-</p>
+          <p>
+            <strong>Docora</strong> je inovativni alat koji ti omogućava da brzo
+            i efikasno kreiraš profesionalne PDF izveštaje i beleške koristeći
+            samo glasovne komande. Uz minimalan trud, štediš dragoceno vreme i
+            pojednostavljuješ svakodnevne obaveze.
+          </p>
 
-<p>
-  Korišćenjem Docore, automatizuješ svoju dokumentaciju i ubrzavaš procese - što ti omogućava da budeš korak ispred konkurencije i fokusiraš se na ono
-  što je zaista važno: tvoje korisnike i posao.
-</p>
+          <p>
+            Korišćenjem Docore, automatizuješ svoju dokumentaciju i ubrzavaš
+            procese - što ti omogućava da budeš korak ispred konkurencije i
+            fokusiraš se na ono što je zaista važno: tvoje korisnike i posao.
+          </p>
 
-<p>
-  Idealan je izbor za sve koji žele da modernizuju rad, eliminišu nepotrebnu
-  papirologiju i podignu kvalitet svog poslovanja na viši nivo.
-</p>
+          <p>
+            Idealan je izbor za sve koji žele da modernizuju rad, eliminišu
+            nepotrebnu papirologiju i podignu kvalitet svog poslovanja na viši
+            nivo.
+          </p>
           <ul className="about-features">
             <p>Kako ti Docora pomaže:</p>
             <li>

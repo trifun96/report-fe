@@ -28,7 +28,7 @@ const ResetPassword = () => {
         className: "my-toast",
         progressClassName: "my-toast-progress",
       });
-      navigate("/login");
+      navigate("/");
     } catch (err) {
       alert(err.message);
     }
