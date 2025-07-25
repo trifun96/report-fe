@@ -33,7 +33,7 @@ const Header = ({ user, onLogout }) => {
             {menuOpen && (
               <div className="dropdown">
                 <div className="user-name">
-                  <a className="profile-link" href="/profile">
+                  <a className="profile-link">
                     {user.name}
                   </a>
                 </div>

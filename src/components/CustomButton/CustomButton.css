@@ -5,19 +5,19 @@
   font-weight: 600;
   border: none;
   border-radius: 8px;
-  background: linear-gradient(135deg, #bb743a, #f6b86a);
-  color: #3b3b3b;
+  background: linear-gradient(135deg, #5a4bda, #4538a0);
+  color: #ffffff;
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
 .custom-gradient-button:hover {
-  background: linear-gradient(135deg, #d99d4a, #ffc674);
-  color: #1b1b1b;
+  background: linear-gradient(135deg, #4538a0, #5a4bda);
+  color: #ffffff;
 }
 
 .custom-gradient-button:disabled {
-  background: #bdbdbd;
+  background: #bdbdf0;
   cursor: not-allowed;
-  color: #7a7a7a;
+  color: #e0e0e0;
 }

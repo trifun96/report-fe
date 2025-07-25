@@ -1,47 +1,48 @@
-.container-main{
-padding: 0px 20px 20px 20px;
+.container-main {
+  padding: 0px 20px 40px 20px;
 }
 
 .report-container {
-  background-color: #1a1a1d;
-  border: 1px solid #2e2e33;
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
   padding: 0px 20px 20px 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  color: #000000;
   max-width: 650px;
   margin-left: auto;
   margin-right: auto;
   animation: fadeIn 0.6s ease-in-out;
-  border-radius: 20px;
+  border-radius: 12px;
   margin-top: 50px;
 }
 
 .report-container h2 {
   font-size: 1.8rem;
-  color: #61dafb;
+  color: #5a4bda;
   margin-bottom: 20px;
   text-align: center;
 }
 
 .report-preview {
-  background-color: #0f0f11;
-  border: 1px solid #2e2e33;
+  background-color: #fdfdfd;
+  border: 1px solid #d0d0d0;
   padding: 20px;
   border-radius: 10px;
   white-space: pre-wrap;
-  max-height: 400px;
+  max-height: 600px;
   overflow-y: auto;
-  font-family: "Courier New", monospace;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #e0e0e0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #000000;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.05);
 }
 
 .send-button {
   margin-top: 20px;
   width: 100%;
-  background: linear-gradient(135deg, #61dafb, #1b9cf1);
-  color: #0f0f0f;
+  background: linear-gradient(135deg, #5a4bda, #4538a0);
+  color: white;
   font-weight: bold;
   font-size: 1rem;
   border: none;
@@ -52,25 +53,24 @@ padding: 0px 20px 20px 20px;
 }
 
 .send-button:hover {
-  background-color: #1b9cf1;
-  color: white;
+  background-color: #006ae0;
 }
 
 .send-button:disabled {
-  background-color: #444;
+  background-color: #cccccc;
   cursor: not-allowed;
-  color: #888;
+  color: #666666;
 }
 
 .my-toast {
-  background: #383636 !important;  
-  color: white !important;
+  background: #eeeeee !important;
+  color: #000000 !important;
   font-weight: bold;
   border-radius: 8px;
 }
 
 .my-toast-progress {
-  background: white !important;
+  background: #007bff !important;
 }
 
 @keyframes fadeIn {
@@ -86,7 +86,7 @@ padding: 0px 20px 20px 20px;
 }
 
 @media (max-width: 768px) {
-  .container-main{
+  .container-main {
     margin-top: 100px;
   }
 }

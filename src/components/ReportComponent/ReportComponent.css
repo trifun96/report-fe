@@ -1,33 +1,27 @@
 .form-wrapper {
-  min-height: 100dvh;
-  background: linear-gradient(
-    135deg,
-    #fff8eb 70%,
-    #ffe3b8 60%,
-    #ffcd91 70%, 
-    #f9a858 75%
-  );
+  background-color: #ffffff;
   display: flex;
+  z-index: 0;
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow: hidden;
-  padding: 100px 20px 0;
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
+  margin: 0px 0px 40px 0px;
 }
 
 .patient-form {
   position: relative;
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: #e9ebf5;
   border-radius: 20px;
   padding: 40px 50px;
   width: 100%;
   max-width: 600px;
-  box-shadow: 0 20px 50px rgba(162, 76, 39, 0.1);
+  box-shadow: 0 20px 50px rgba(90, 75, 218, 0.1);
   animation: fadeIn 0.8s ease-out;
-  color: #3b3b3b;
+  color: #2b2b2b;
+  border: 1px solid #c8c9f3;
 }
 
 .form-row {
@@ -42,26 +36,26 @@
 .datepicker-input {
   width: 100%;
   padding: 14px 18px;
-  background: #fff9f2;
-  border: 1px solid #e6d5b8;
+  background: #f6f7ff;
+  border: 1px solid #c8c9f3;
   border-radius: 12px;
-  color: #4a4a4a;
+  color: #2b2b2b;
   font-size: 1rem;
   transition: border-color 0.3s ease, background 0.3s ease;
-  text-decoration: none;
+  font-family: inherit;
 }
 
 .patient-form input::placeholder,
 .patient-form textarea::placeholder {
-  color: #bb743a;
+  color: #5a4bda;
 }
 
 .patient-form input:focus,
 .patient-form textarea:focus,
 .datepicker-input:focus {
   outline: none;
-  background: #fff4db;
-  border-color: #bb743a;
+  background: #eef0ff;
+  border-color: #5a4bda;
 }
 
 textarea {
@@ -75,8 +69,8 @@ textarea {
 }
 
 .error-message {
-  color: #ff4d4f;
-  background: rgba(255, 77, 79, 0.1);
+  color: #e53e3e;
+  background: rgba(229, 62, 62, 0.08);
   padding: 12px 16px;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -96,14 +90,12 @@ textarea {
 }
 
 @media (max-width: 768px) {
-
-  .form-wrapper{
+  .form-wrapper {
     padding: 20px;
   }
 
   .patient-form {
     padding: 25px;
-    margin-top: 80px;
   }
 
   .form-row {

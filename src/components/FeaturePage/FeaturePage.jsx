@@ -1,6 +1,6 @@
 import React from "react";
 import "./FeaturePage.css";
-import { FaGlobe, FaRocket, FaMoneyBillWave, FaHeadset } from "react-icons/fa";
+import { FaGlobe, FaRocket, FaShieldAlt, FaHeadset } from "react-icons/fa";
 const features = [
   {
     icon: <FaGlobe />,
@@ -15,11 +15,12 @@ const features = [
       "Napredne funkcionalnosti omogućavaju brzo beleženje informacija i izradu dokumenata – štede vreme i olakšavaju rad.",
   },
   {
-    icon: <FaMoneyBillWave />,
-    title: "Bez Provizija",
+    icon: <FaShieldAlt />,
+    title: "Garancija Povrata Novca",
     description:
-      "Naplaćuj svoje usluge direktno putem sistema – bez dodatnih troškova ni za tebe, ni za tvoje klijente.",
+      "Ukoliko nisi zadovoljan uslugom, bez brige – vraćamo novac bez dodatnih pitanja. Tvoje poverenje nam je najvažnije.",
   },
+
   {
     icon: <FaHeadset />,
     title: "Lična Podrška",
@@ -27,7 +28,6 @@ const features = [
       "Naš tim ti je dostupan za pomoć pri podešavanju i optimizaciji korišćenja – brzo, jednostavno i efikasno.",
   },
 ];
-
 
 const FeaturesSection = () => {
   return (
