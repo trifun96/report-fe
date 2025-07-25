@@ -5,6 +5,7 @@ import Logo from "../Logo/Logo";
 import { loginUser, registerUser } from "../../api/api";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Header from "../Header/Header";
 
 const AuthForm = ({ mode }) => {
   const [isLogin, setIsLogin] = useState(mode === "login");
@@ -81,7 +82,7 @@ const AuthForm = ({ mode }) => {
 
   return (
     <>
-      <Logo />
+      <Header />
       <div className="auth-background">
         <div className="auth-form-container">
           <h2 className="auth-title">{isLogin ? "Prijava" : "Registracija"}</h2>

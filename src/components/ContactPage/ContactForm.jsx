@@ -3,7 +3,7 @@ import { sendContactMessage } from "../../api/api";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import "./ContactForm.css";
-import Logo from "../Logo/Logo";
+import Header from "../Header/Header";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -45,7 +45,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <Logo />
+      <Header/>
       <div className="contact-form-container">
         <form onSubmit={handleSubmit}>
           <h2>Kontaktirajte nas</h2>

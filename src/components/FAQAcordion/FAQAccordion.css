@@ -11,13 +11,11 @@
 }
 
 .faq-title {
-  font-size: 48px;
+  color:#5a4bda;
+  font-size: 40px;
   font-weight: 800;
-  color: #a24c27;
-  font-family: 'Poppins', sans-serif;
-  letter-spacing: -1px;
-  line-height: 1.2;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .faq-item {
@@ -28,7 +26,7 @@
 .faq-question {
   background: none;
   border: none;
-  color: #a24c27;
+  color: #000000;
   font-size: 1rem;
   text-align: left;
   width: 100%;
@@ -54,7 +52,7 @@
   }
 
   .faq-title{
-    font-size: 35px;
+    font-size: 28px;
   }
 
   .faq-answer {

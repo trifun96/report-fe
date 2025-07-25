@@ -1,13 +1,11 @@
 .auth-background {
-    min-height: 100dvh;
-    background: linear-gradient(135deg, #ffffff 50%, #e9eaff 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     overflow: hidden;
     padding: 40px 20px;
-    margin-top: 50px;
+    margin: 20px;
 }
 
 .auth-form-container {
@@ -95,8 +93,6 @@
 @media (max-width: 768px) {
     .auth-form-container {
         max-width: 100%;
-        padding: 30px 20px;
-        margin-top: 40px;
     }
 
     .auth-title {

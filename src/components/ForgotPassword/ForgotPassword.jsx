@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "./ForgotPassword.css";
 import { toast } from "react-toastify";
 import Logo from "../Logo/Logo";
+import Header from "../Header/Header";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -27,7 +28,7 @@ const ForgotPassword = () => {
 
   return (
     <>
-      <Logo />
+      <Header/>
       <div className="forgot-password-container">
         <form onSubmit={handleSubmit}>
           <h2>Zaboravili ste lozinku?</h2>
