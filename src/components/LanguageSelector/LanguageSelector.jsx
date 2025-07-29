@@ -12,7 +12,7 @@ export default function LanguageSelector() {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef(null);
 
-  const currentLang = i18n.language || "en";
+const currentLang = LANGUAGES[i18n.language] ? i18n.language : "en";
 
   const toggleOpen = () => setOpen(!open);
 
