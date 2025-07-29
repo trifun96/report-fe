@@ -131,9 +131,9 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 481px) {
   .header {
-    padding: 0 12px;
+    padding: 15 12px;
   }
 
   .header img {
