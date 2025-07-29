@@ -75,8 +75,7 @@ const currentLang = LANGUAGES[i18n.language] ? i18n.language : "en";
             borderRadius: "8px",
             listStyle: "none",
             margin: 0,
-            padding: "4px 0",
-            width: "140px",
+            padding: "0",
             zIndex: 1000,
           }}
         >
