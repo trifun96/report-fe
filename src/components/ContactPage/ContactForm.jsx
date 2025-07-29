@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import { sendContactMessage } from "../../api/api";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "./ContactForm.css";
 import Header from "../Header/Header";
 
 const ContactForm = () => {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -30,14 +33,14 @@ const ContactForm = () => {
       const res = await sendContactMessage(formData);
       setResponseMessage(res.message);
       setFormData({ name: "", email: "", message: "" });
-      toast.success("Vaša poruka je poslata.", {
+      toast.success(t("contactForm.toastSuccess"), {
         toastId: "sent-request",
         className: "my-toast",
         progressClassName: "my-toast-progress",
       });
       navigate("/");
     } catch (err) {
-      setResponseMessage(err.message || "Greška pri slanju poruke.");
+      setResponseMessage(err.message || t("contactForm.toastError"));
     } finally {
       setLoading(false);
     }
@@ -45,20 +48,16 @@ const ContactForm = () => {
 
   return (
     <>
-      <Header/>
+      <Header />
       <div className="contact-form-container">
         <form onSubmit={handleSubmit}>
-          <h2>Kontaktirajte nas</h2>
-          <p style={{ color: "#2B2B2B" }}>
-            Imate pitanja, predloge ili želite posebnu ponudu prilagođenu vašim
-            potrebama? Pišite nam putem forme ispod – tu smo da vam pomognemo
-            što je brže moguće.
-          </p>
+          <h2>{t("contactForm.title")}</h2>
+          <p style={{ color: "#2B2B2B" }}>{t("contactForm.description")}</p>
 
           <input
             type="text"
             name="name"
-            placeholder="Vaše ime"
+            placeholder={t("contactForm.namePlaceholder")}
             value={formData.name}
             onChange={handleChange}
             required
@@ -66,14 +65,14 @@ const ContactForm = () => {
           <input
             type="email"
             name="email"
-            placeholder="Vaš email"
+            placeholder={t("contactForm.emailPlaceholder")}
             value={formData.email}
             onChange={handleChange}
             required
           />
           <textarea
             name="message"
-            placeholder="Vaša poruka"
+            placeholder={t("contactForm.messagePlaceholder")}
             value={formData.message}
             onChange={handleChange}
             required
@@ -83,13 +82,13 @@ const ContactForm = () => {
               padding: "12px 16px",
               borderRadius: "12px",
               background: "rgba(255,255,255,0.06)",
-              border: "1px solid #c8c9f3;",
+              border: "1px solid #c8c9f3",
               color: "black",
               fontSize: "1rem",
             }}
           />
           <button type="submit" disabled={loading}>
-            {loading ? "Šaljem..." : "Pošalji poruku"}
+            {loading ? t("contactForm.sending") : t("contactForm.sendButton")}
           </button>
         </form>
       </div>

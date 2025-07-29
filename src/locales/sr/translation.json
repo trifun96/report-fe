@@ -1,0 +1,118 @@
+{
+  "auth": {
+    "login": "PRIJAVI SE",
+    "signup": "REGISTRUJ SE",
+    "home":"POČETNA STRANA",
+    "login-subtitle": "Dobrodošli nazad! Molimo vas da unesete svoje podatke za prijavu.",
+    "signup-subtitle": "Napravite novi nalog unosom traženih podataka.",
+    "name": "Ime i prezime",
+    "email": "Email",
+    "password": "Lozinka",
+    "address": "Adresa",
+    "select-activity": "Izaberi delatnost",
+    "activity": {
+      "engineering": "Građevinarstvo i inženjering",
+      "field": "Terenske i servisne usluge",
+      "inspection": "Inspekcija i kontrola kvaliteta",
+      "management": "Upravljanje i koordinacija projekata",
+      "healthcare": "Zdravstvo i stomatologija"
+    },
+    "login-title": "Prijavi se",
+    "signup-title": "Registruj se",
+    "login-button": "Prijavi se",
+    "signup-button": "Registruj se",
+    "no-account": "Nemaš nalog?",
+    "have-account": "Već imaš nalog?",
+    "register-here": "Registruj se",
+    "login-here": "Prijavi se",
+    "forgot-password": "Zaboravili ste lozinku?",
+    "login-success": "Uspešna prijava!",
+    "signup-success": "Uspešna registracija!",
+    "error-generic": "Došlo je do greške",
+    "logout":"Izloguj se"
+  },
+  "forgotPassword": {
+    "title": "Zaboravili ste lozinku?",
+    "description": "Unesite svoj email i uskoro ćete dobiti poruku sa uputstvima za resetovanje lozinke.",
+    "input-placeholder": "Unesite email",
+    "submit-button": "Pošalji link",
+    "success": "Link za promenu lozinke je poslat na vaš mejl.",
+    "error": "Greška"
+  },
+  "landing": {
+    "headline": "Pretvorite glas u stručne izveštaje brzo i lako.",
+    "info": "Docora vam pomaže da kreirate profesionalne i detaljne izveštaje koristeći samo glas. Brzo, jednostavno i bez kucanja. Kreirajte PDF izveštaj u par klikova i pošaljite ga gde god želite — direktno iz aplikacije. Vi govorite – Docora zapisuje, formatira i šalje.",
+    "info-p": "Uštedite vreme, poboljšajte efikasnost i budite ispred konkurencije.",
+    "button": "Započni besplatno"
+  },
+  "general": {
+    "contact": "Kontakt"
+  },
+    "about": {
+    "headline": "je inovativni alat koji ti omogućava da brzo i efikasno kreiraš profesionalne PDF izveštaje i beleške koristeći samo glasovne komande.",
+    "description": "Uz minimalan trud, štediš dragoceno vreme i pojednostavljuješ svakodnevne obaveze. Automatizuješ svoju dokumentaciju i ubrzavaš procese — što ti omogućava da budeš korak ispred konkurencije i fokusiraš se na ono što je zaista važno: tvoje korisnike i posao.",
+    "ideal-for": "Idealan je izbor za sve koji žele da modernizuju rad, eliminišu nepotrebnu papirologiju i podignu kvalitet svog poslovanja na viši nivo.",
+    "how-it-helps": "Kako ti Docora pomaže:",
+    "features": {
+      "speech-to-text": "Pretvara govor u tekst",
+      "structure-report": "Strukturira izveštaj",
+      "generate-pdf": "Generiše PDF",
+      "send-report": "Šalje izveštaj gde ti želiš (Gmail, Viber)",
+      "user-login": "Login za korisnike"
+    }
+  },
+  "feature-page": {
+    "headline": "Zašto baš Docora?"
+  },
+   "testimonial-page": {
+    "title": "Šta su rekli naši korisnici?"
+  },
+  "pricing": {
+    "title": "Docora je tu za tebe. Odaberi plan.",
+    "mostPopular": "Najpopularnije",
+    "selectPlan": "Izaberi plan",
+    "contact": "Kontakt",
+    "selectedPlan": "Izabrali ste plan: {{plan}}"
+  },
+  "footer": {
+    "logo": "Docora",
+    "description": "Docora je platforma koja olakšava kreiranje izveštaja i beleški korišćenjem glasa. Bilo da ste profesionalac, preduzetnik ili član tima koji beleži informacije, Docora vam štedi vreme i eliminiše potrebu za ručnim kucanjem.",
+    "linksTitle": "Linkovi",
+    "links": {
+      "home": "Početna",
+      "login": "Prijava",
+      "signup": "Registracija",
+      "contact": "Kontakt"
+    },
+    "followUs": "Pratite nas",
+    "copyright": "Sva prava zadržana."
+  },
+  "contactForm": {
+    "title": "Kontaktirajte nas",
+    "description": "Imate pitanja, predloge ili želite posebnu ponudu prilagođenu vašim potrebama? Pišite nam putem forme ispod – tu smo da vam pomognemo što je brže moguće.",
+    "namePlaceholder": "Vaše ime",
+    "emailPlaceholder": "Vaš email",
+    "messagePlaceholder": "Vaša poruka",
+    "sendButton": "Pošalji poruku",
+    "sending": "Šaljem...",
+    "toastSuccess": "Vaša poruka je poslata.",
+    "toastError": "Greška pri slanju poruke."
+  },
+    "report":{
+    "headline":"Kreiraj detaljan izveštaj ili belešku",
+    "name":"Ime i Prezime",
+    "phone":"Broj telefona",
+    "email":"Email",
+    "date-of-birth":"Datum rodjenja",
+    "description":"Opis ili napomena",
+    "button":"Generiši izveštaj",
+    "button-two":"Generišem izveštaj",
+    "listening":"Zaustavi snimanje",
+    "listening-two":"Govori"
+  },
+  "report-display":{
+    "headline":"Generisani izveštaj",
+    "button":"Šaljem",
+    "button-two":"Pošalji PDF na mail"
+  }
+}

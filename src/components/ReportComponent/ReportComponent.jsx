@@ -10,6 +10,7 @@ import { toast } from "react-toastify";
 import Header from "../Header/Header";
 import { useNavigate } from "react-router-dom";
 import { logoutUser } from "../../api/api";
+import { useTranslation } from "react-i18next";
 import CustomButton from "../CustomButton/CustomButton";
 
 export default function ReportComponent({
@@ -28,6 +29,7 @@ export default function ReportComponent({
   const [error, setError] = useState(null);
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const recognitionRef = useRef(null);
 
@@ -212,104 +214,104 @@ ${opis}
     setEmail("");
     setOpis("");
   };
-return (
-  <>
-    <Header user={user} onLogout={handleLogout} />
-    <div className="form-wrapper">
-      <form onSubmit={handleSubmit} className="patient-form">
+  return (
+    <>
+      <Header user={user} onLogout={handleLogout} />
+      <div className="form-wrapper">
+        <form onSubmit={handleSubmit} className="patient-form">
           <p
-    style={{
-      textAlign: "center",
-      color: "#5a4bda",
-      marginBottom: "30px",
-      fontWeight: "600",
-      fontFamily: "'Arial', sans-serif",
-      fontSize: "1.2rem",
-    }}
-  >
-    Kreiraj detaljan izveštaj ili belešku
-  </p>
-        {error && <div className="error-message">{error}</div>}
-
-        <div className="form-row">
-          <input
-            placeholder="Ime i prezime"
-            value={imeIPrezime}
-            onChange={(e) => setImeIPrezime(e.target.value)}
-            required
-          />
-        </div>
-        <div className="form-row">
-          <input
-            placeholder="Telefon"
-            value={telefon}
-            onChange={(e) => setTelefon(e.target.value)}
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-
-        <div className="form-row">
-          <div className="form-group">
-            <DatePicker
-              selected={datumRodjenja}
-              onChange={(date) => setDatumRodjenja(date)}
-              placeholderText="Datum rođenja"
-              dateFormat="dd/MM/yyyy"
-              showYearDropdown
-              scrollableYearDropdown
-              yearDropdownItemNumber={100}
-              className="datepicker-input"
-            />
-          </div>
-        </div>
-
-        <div className="form-row">
-          <textarea
-            placeholder="Opis ili napomene"
-            value={opis}
-            spellCheck="false"
-            onChange={(e) => setOpis(e.target.value)}
-            required
-            rows={6}
-          />
-        </div>
-
-        <div className="form-row button-row">
-          <Grid
-            item
-            xs={12}
-            sm={6}
             style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              width: "100%",
+              textAlign: "center",
+              color: "#5a4bda",
+              marginBottom: "30px",
+              fontWeight: "600",
+              fontFamily: "'Arial', sans-serif",
+              fontSize: "1.2rem",
             }}
           >
-            <Button
-              variant="outlined"
-              color="info"
+            {t("report.headline")}
+          </p>
+          {error && <div className="error-message">{error}</div>}
+
+          <div className="form-row">
+            <input
+              placeholder={t("report.name")}
+              value={imeIPrezime}
+              onChange={(e) => setImeIPrezime(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-row">
+            <input
+              placeholder={t("report.phone")}
+              value={telefon}
+              onChange={(e) => setTelefon(e.target.value)}
+            />
+            <input
+              type="email"
+              placeholder={t("report.email")}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+
+          <div className="form-row">
+            <div className="form-group">
+              <DatePicker
+                selected={datumRodjenja}
+                onChange={(date) => setDatumRodjenja(date)}
+                placeholderText={t("report.date-of-birth")}
+                dateFormat="dd/MM/yyyy"
+                showYearDropdown
+                scrollableYearDropdown
+                yearDropdownItemNumber={100}
+                className="datepicker-input"
+              />
+            </div>
+          </div>
+
+          <div className="form-row">
+            <textarea
+              placeholder={t("report.description")}
+              value={opis}
+              spellCheck="false"
+              onChange={(e) => setOpis(e.target.value)}
+              required
+              rows={6}
+            />
+          </div>
+
+          <div className="form-row button-row">
+            <Grid
+              item
+              xs={12}
+              sm={6}
               style={{
-                backgroundColor: "white",
-                color: "black",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
                 width: "100%",
               }}
-              startIcon={listening ? <MicOffIcon /> : <MicIcon />}
-              onClick={toggleListening}
             >
-              {listening ? "Zaustavi snimanje" : "Govori"}
-            </Button>
-          </Grid>
-          <CustomButton loading={loading} onClick={handleSubmit} />
-        </div>
-      </form>
-    </div>
-  </>
-);
+              <Button
+                variant="outlined"
+                color="info"
+                style={{
+                  backgroundColor: "white",
+                  color: "black",
+                  width: "100%",
+                }}
+                startIcon={listening ? <MicOffIcon /> : <MicIcon />}
+                onClick={toggleListening}
+              >
+                {listening ? t("report.listening") : t("report.listening-two")}
+              </Button>
+            </Grid>
+            <CustomButton loading={loading} onClick={handleSubmit} />
+          </div>
+        </form>
+      </div>
+    </>
+  );
 }

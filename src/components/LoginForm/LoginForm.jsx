@@ -5,6 +5,7 @@ import Logo from "../Logo/Logo";
 import { loginUser, registerUser } from "../../api/api";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useTranslation } from "react-i18next";
 import Header from "../Header/Header";
 
 const AuthForm = ({ mode }) => {
@@ -19,6 +20,7 @@ const AuthForm = ({ mode }) => {
   });
 
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   useEffect(() => {
     setIsLogin(mode === "login");
@@ -53,7 +55,7 @@ const AuthForm = ({ mode }) => {
           localStorage.setItem("user", JSON.stringify(response.user));
         }
 
-        toast("Uspešna prijava!", {
+        toast(t("auth.login-success"), {
           className: "my-toast",
           progressClassName: "my-toast-progress",
         });
@@ -69,7 +71,7 @@ const AuthForm = ({ mode }) => {
         adresa: formData.adresa,
       });
 
-      toast("Uspešna registracija!", {
+      toast(t("auth.signup-success"), {
         className: "my-toast",
         progressClassName: "my-toast-progress",
       });
@@ -85,11 +87,11 @@ const AuthForm = ({ mode }) => {
       <Header />
       <div className="auth-background">
         <div className="auth-form-container">
-          <h2 className="auth-title">{isLogin ? "Prijava" : "Registracija"}</h2>
+          <h2 className="auth-title">
+            {t(isLogin ? "auth.login-title" : "auth.signup-title")}
+          </h2>
           <p className="auth-intro">
-            {isLogin
-              ? "Dobrodošli nazad! Molimo vas da unesete svoje podatke za prijavu."
-              : "Napravite novi nalog unosom traženih podataka."}
+            {t(isLogin ? "auth.login-subtitle" : "auth.signup-subtitle")}
           </p>
           <form className="auth-form" onSubmit={handleSubmit}>
             {!isLogin && (
@@ -97,7 +99,7 @@ const AuthForm = ({ mode }) => {
                 <input
                   type="text"
                   name="name"
-                  placeholder="Ime i prezime"
+                  placeholder={t("auth.name")}
                   required
                   value={formData.name}
                   onChange={handleChange}
@@ -108,27 +110,27 @@ const AuthForm = ({ mode }) => {
                   value={formData.delatnost}
                   onChange={handleChange}
                 >
-                  <option value="">Izaberi delatnost</option>
+                  <option value="">{t("auth.select-activity")}</option>
                   <option value="gradjevina-inzenjering">
-                    Građevinarstvo i inženjering
+                    {t("auth.activity.engineering")}
                   </option>
                   <option value="terenske-usluge">
-                    Terenske i servisne usluge
+                    {t("auth.activity.field")}
                   </option>
                   <option value="inspekcija-kontrola">
-                    Inspekcija i kontrola kvaliteta
+                    {t("auth.activity.inspection")}
                   </option>
                   <option value="upravljanje-projektima">
-                    Upravljanje i koordinacija projekata
+                    {t("auth.activity.management")}
                   </option>
                   <option value="zdravstvo-stomatologija">
-                    Zdravstvo i stomatologija
+                    {t("auth.activity.healthcare")}
                   </option>
                 </select>
                 <input
                   type="text"
                   name="adresa"
-                  placeholder="Adresa"
+                  placeholder={t("auth.address")}
                   required
                   value={formData.adresa}
                   onChange={handleChange}
@@ -138,7 +140,7 @@ const AuthForm = ({ mode }) => {
             <input
               type="email"
               name="email"
-              placeholder="Email"
+              placeholder={t("auth.email")}
               required
               value={formData.email}
               onChange={handleChange}
@@ -146,25 +148,25 @@ const AuthForm = ({ mode }) => {
             <input
               type="password"
               name="password"
-              placeholder="Lozinka"
+              placeholder={t("auth.password")}
               required
               value={formData.password}
               onChange={handleChange}
             />
             <button type="submit" className="auth-button">
-              {isLogin ? "Prijavi se" : "Registruj se"}
+              {t(isLogin ? "auth.login-button" : "auth.signup-button")}
             </button>
           </form>
           <p className="auth-toggle">
-            {isLogin ? "Nemaš nalog?" : "Već imaš nalog?"}{" "}
+            {t(isLogin ? "auth.no-account" : "auth.have-account")}{" "}
             <span onClick={toggleMode}>
-              {isLogin ? "Registruj se" : "Prijavi se"}
+              {t(isLogin ? "auth.register-here" : "auth.login-here")}
             </span>
           </p>
           {isLogin && (
             <p className="forgot-password">
               <span onClick={() => navigate("/forgot-password")}>
-                Zaboravili ste lozinku?
+                {t("auth.forgot-password")}
               </span>
             </p>
           )}

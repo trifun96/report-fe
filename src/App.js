@@ -9,10 +9,9 @@ import PublicRoute from "./helpers/PublicRoute";
 import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
 import ResetPassword from "./components/ResetPassword/ResetPassword";
 import ReportDisplay from "./components/ReportDisplay/ReportDisplay";
-import Footer from "./components/FooterPage/FooterPage";
 import ContactForm from "./components/ContactPage/ContactForm";
 import PricingPlans from "./components/PricingPlan/PricingPlan";
-import ProfilePage from "./components/ProfilePage/ProfilePage";
+import LanguageSelector from "./components/LanguageSelector/LanguageSelector";
 import { ToastContainer } from "react-toastify";
 
 function App() {
@@ -26,6 +25,9 @@ function App() {
 
   return (
     <div className="App">
+      <header className="app-header">
+        <LanguageSelector />
+      </header>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route

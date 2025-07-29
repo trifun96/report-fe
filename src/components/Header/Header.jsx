@@ -1,12 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { UserRound } from "lucide-react";
 import logo from "../../images/logo.png";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "./Header.css";
 
 const Header = ({ user, onLogout }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
   const navigate = useNavigate();
+  const location = useLocation();
+    const { t } = useTranslation();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 767);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const toggleDropdown = () => {
     setMenuOpen(!menuOpen);
@@ -20,8 +32,19 @@ const Header = ({ user, onLogout }) => {
     navigate("/signup");
   };
 
+  const handleHome = () => {
+    navigate("/");
+  };
+
+  const getButtonClass = (path) => {
+    if (!isMobile && location.pathname === "/") {
+      return "inactive-tab";
+    }
+    return location.pathname === path ? "active-tab" : "inactive-tab";
+  };
+
   return (
-    <header className="header">
+   <header className="header">
       <img src={logo} alt="Logo" />
 
       <div className="user-section">
@@ -33,29 +56,94 @@ const Header = ({ user, onLogout }) => {
             {menuOpen && (
               <div className="dropdown">
                 <div className="user-name">
-                  <a className="profile-link">
-                    {user.name}
-                  </a>
+                  <a className="profile-link">{user.name}</a>
                 </div>
                 <button className="logout-button" onClick={onLogout}>
-                  Logout
+                  {t("auth.logout")}
                 </button>
               </div>
             )}
           </>
+        ) : isMobile ? (
+          location.pathname === "/" ? (
+            <button
+              className={`tab-button ${getButtonClass("/signup")}`}
+              onClick={handleSignUp}
+            >
+              {t("auth.signup", "Sign Up")}
+            </button>
+          ) : (
+            <button className="tab-button inactive-tab" onClick={handleHome}>
+              {t("auth.home")}
+            </button>
+          )
         ) : (
           <>
-            <button className="login-button desktop-only" onClick={handleLogin}>
-              LOG IN
-            </button>
+            {["/login", "/contact", "/reset-password", "/forgot-password"].includes(
+              location.pathname
+            ) && (
+              <>
+                <button className="tab-button inactive-tab" onClick={handleHome}>
+                  {t("auth.home")}
+                </button>
+                <button
+                  className={`tab-button ${getButtonClass("/login")}`}
+                  onClick={handleLogin}
+                >
+                  {t("auth.login", "Login")}
+                </button>
+              </>
+            )}
 
-            <button className="signup-button mobile-only" onClick={handleSignUp}>
-              SIGN UP
-            </button>
+            {location.pathname === "/signup" && (
+              <>
+                <button className="tab-button inactive-tab" onClick={handleHome}>
+                  {t("auth.home")}
+                </button>
+                <button
+                  className={`tab-button ${getButtonClass("/signup")}`}
+                  onClick={handleSignUp}
+                >
+                  {t("auth.signup", "Sign Up")}
+                </button>
+              </>
+            )}
 
-            <button className="signup-button desktop-only" onClick={handleSignUp}>
-              SIGN UP
-            </button>
+            {location.pathname === "/" && (
+              <>
+                <button
+                  className={`tab-button ${getButtonClass("/login")}`}
+                  onClick={handleLogin}
+                >
+                  {t("auth.login", "Login")}
+                </button>
+                <button
+                  className={`tab-button ${getButtonClass("/signup")}`}
+                  onClick={handleSignUp}
+                >
+                  {t("auth.signup", "Sign Up")}
+                </button>
+              </>
+            )}
+
+            {!["/", "/login", "/signup", "/contact", "/reset-password", "/forgot-password"].includes(
+              location.pathname
+            ) && (
+              <>
+                <button
+                  className={`tab-button ${getButtonClass("/login")}`}
+                  onClick={handleLogin}
+                >
+                  {t("auth.login", "Login")}
+                </button>
+                <button
+                  className={`tab-button ${getButtonClass("/signup")}`}
+                  onClick={handleSignUp}
+                >
+                  {t("auth.signup", "Sign Up")}
+                </button>
+              </>
+            )}
           </>
         )}
       </div>

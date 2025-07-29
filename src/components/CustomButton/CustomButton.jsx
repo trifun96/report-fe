@@ -1,7 +1,9 @@
 import React from "react";
 import "./CustomButton.css";
+import { useTranslation } from "react-i18next";
 
 const CustomButton = ({ loading, onClick }) => {
+     const { t } = useTranslation();
   return (
     <button
       type="submit"
@@ -9,7 +11,7 @@ const CustomButton = ({ loading, onClick }) => {
       className="custom-gradient-button"
       onClick={onClick}
     >
-      {loading ? "Generišem..." : "Generiši izveštaj"}
+{loading ? t("report.button-two") : t("report.button")}
     </button>
   );
 };

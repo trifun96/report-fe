@@ -1,40 +1,39 @@
+import React from "react";
+import { useTranslation } from "react-i18next";
 import "./FooterPage.css";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-left">
-          <h6 className="footer-logo">Docora</h6>
-          <p className="footer-description">
-            Docora je platforma koja olakšava kreiranje izveštaja i beleški
-            korišćenjem glasa. Bilo da ste profesionalac, preduzetnik ili član
-            tima koji beleži informacije, Docora vam štedi vreme i eliminiše
-            potrebu za ručnim kucanjem.
-          </p>
+          <h6 className="footer-logo">{t("footer.logo")}</h6>
+          <p className="footer-description">{t("footer.description")}</p>
         </div>
 
         <div className="footer-center">
-          <h3>Linkovi</h3>
+          <h3>{t("footer.linksTitle")}</h3>
           <ul>
             <li>
-              <a href="/">Početna</a>
+              <a href="/">{t("footer.links.home")}</a>
             </li>
             <li>
-              <a href="/login">Prijava</a>
+              <a href="/login">{t("footer.links.login")}</a>
             </li>
             <li>
-              <a href="/signup">Registracija</a>
+              <a href="/signup">{t("footer.links.signup")}</a>
             </li>
             <li>
-              <a href="/contact">Kontakt</a>
+              <a href="/contact">{t("footer.links.contact")}</a>
             </li>
           </ul>
         </div>
 
         <div className="footer-right">
-          <h3>Pratite nas</h3>
+          <h3>{t("footer.followUs")}</h3>
           <div className="footer-socials">
             <a
               href="https://facebook.com"
@@ -62,7 +61,9 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Docora. Sva prava zadržana.</p>
+        <p>
+          &copy; {new Date().getFullYear()} Docora. {t("footer.copyright")}
+        </p>
       </div>
     </footer>
   );

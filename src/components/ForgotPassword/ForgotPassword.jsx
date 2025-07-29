@@ -3,47 +3,46 @@ import { forgotPassword } from "../../api/api";
 import { useNavigate } from "react-router-dom";
 import "./ForgotPassword.css";
 import { toast } from "react-toastify";
-import Logo from "../Logo/Logo";
 import Header from "../Header/Header";
+import { useTranslation } from "react-i18next";
 
 const ForgotPassword = () => {
+  const { t } = useTranslation();
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const res = await forgotPassword(email);
       setMessage(res.message);
-      toast.success("Link za promenu lozinke je poslat na vaš mejl.", {
+      toast.success(t("forgotPassword.success"), {
         toastId: "sent-request",
         className: "my-toast",
         progressClassName: "my-toast-progress",
       });
       navigate("/");
     } catch (err) {
-      setMessage("Greška: " + (err?.message || "nepoznato"));
+      setMessage(`${t("forgotPassword.error")}: ${err?.message || "nepoznato"}`);
     }
   };
 
   return (
     <>
-      <Header/>
+      <Header />
       <div className="forgot-password-container">
         <form onSubmit={handleSubmit}>
-          <h2>Zaboravili ste lozinku?</h2>
-          <p>
-            Unesite svoj email i uskoro ćete dobiti poruku sa uputstvima za
-            resetovanje lozinke.
-          </p>
+          <h2>{t("forgotPassword.title")}</h2>
+          <p>{t("forgotPassword.description")}</p>
           <input
             type="email"
-            placeholder="Unesite email"
+            placeholder={t("forgotPassword.input-placeholder")}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <button type="submit">Pošalji link</button>
+          <button type="submit">{t("forgotPassword.submit-button")}</button>
         </form>
       </div>
     </>

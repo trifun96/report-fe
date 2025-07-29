@@ -6,55 +6,55 @@ import FAQAccordion from "../FAQAcordion/FAQAccordion";
 import Footer from "../FooterPage/FooterPage";
 import PricingPlans from "../PricingPlan/PricingPlan";
 import AboutDocora from "../AboutPage/AboutPage";
+import { useTranslation } from "react-i18next";
 import Header from "../Header/Header";
 
 const LandingPage = () => {
   const navigate = useNavigate();
+      const { t } = useTranslation();
+
 
   return (
-    <>
-      <Header />
-      <section className="landing-hero">
-        <div className="landing-hero-content">
-          <h1 className="landing-title">
-            Pretvorite glas u <span>stručne izveštaje</span> <br /> brzo i lako.
-          </h1>
-          <p className="landing-subtitle">
-            Docora vam pomaže da kreirate profesionalne i detaljne izveštaje
-            koristeći samo glas. Brzo, jednostavno i bez kucanja. Kreirajte PDF
-            izveštaj u par klikova i pošaljite ga gde god želite — direktno iz
-            aplikacije. Vi govorite – Docora zapisuje, formatira i šalje.
-          </p>
-          <p className="landing-subtitle">
-            Uštedite vreme, poboljšajte efikasnost i budite ispred konkurencije.
-          </p>
-          <div className="landing-buttons-wrapper">
-            <button
-              className="landing-button"
-              onClick={() => navigate("/signup")}
-              aria-label="Započni besplatno"
-            >
-              Započni besplatno
-            </button>
+  <>
+  <Header />
+  <section className="landing-hero">
+    <div className="landing-hero-content">
+      <h1 className="landing-title">
+        {t("landing.headline")}
+      </h1>
+      <p className="landing-subtitle">
+        {t("landing.info")}
+      </p>
+      <p className="landing-subtitle">
+        {t("landing.info-p")}
+      </p>
+      <div className="landing-buttons-wrapper">
+        <button
+          className="landing-button"
+          onClick={() => navigate("/signup")}
+          aria-label={t("landing.button")}
+        >
+          {t("landing.button")}
+        </button>
 
-            <button
-              className="contact-button"
-              onClick={() => navigate("/contact")}
-              aria-label="Kontakt"
-            >
-              Kontakt
-            </button>
-          </div>
-        </div>
-      </section>
+        <button
+          className="contact-button"
+          onClick={() => navigate("/contact")}
+          aria-label={t("general.contact")}
+        >
+          {t("general.contact")}
+        </button>
+      </div>
+    </div>
+  </section>
 
-      <AboutDocora />
-      <FeaturesSection />
-      <TestimonialsSection />
-      <PricingPlans />
-      <FAQAccordion />
-      <Footer />
-    </>
+  <AboutDocora />
+  <FeaturesSection />
+  <TestimonialsSection />
+  <PricingPlans />
+  <FAQAccordion />
+  <Footer />
+</>
   );
 };
 

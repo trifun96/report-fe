@@ -1,0 +1,120 @@
+{
+  "auth": {
+    "login": "LOGIN",
+    "signup": "SIGN UP",
+    "home": "HOME",
+    "login-subtitle": "Welcome back! Please enter your login details.",
+    "signup-subtitle": "Create a new account by entering the required information.",
+    "name": "Full Name",
+    "email": "Email",
+    "password": "Password",
+    "address": "Address",
+    "select-activity": "Select Activity",
+    "activity": {
+      "engineering": "Construction and Engineering",
+      "field": "Field and Service Services",
+      "inspection": "Inspection and Quality Control",
+      "management": "Project Management and Coordination",
+      "healthcare": "Healthcare and Dentistry"
+    },
+    "login-title": "Log in",
+    "signup-title": "Sign Up",
+    "login-button": "Log In",
+    "signup-button": "Sign Up",
+    "no-account": "Don't have an account?",
+    "have-account": "Already have an account?",
+    "register-here": "Sign Up",
+    "login-here": "Log In",
+    "forgot-password": "Forgot your password?",
+    "login-success": "Successfully logged in!",
+    "signup-success": "Registration successful!",
+    "error-generic": "An error occurred",
+    "logout":"Logout"
+  },
+  "forgotPassword": {
+    "title": "Forgot your password?",
+    "description": "Enter your email and you will soon receive instructions to reset your password.",
+    "input-placeholder": "Enter email",
+    "submit-button": "Send link",
+    "success": "Password reset link has been sent to your email.",
+    "error": "Error"
+  },
+  "landing": {
+    "headline": "Turn your voice into professional reports quickly and easily.",
+    "info": "Docora helps you create professional and detailed reports using only your voice. Fast, simple, and without typing. Create a PDF report in a few clicks and send it anywhere — directly from the app. You speak – Docora records, formats, and sends.",
+    "info-p": "Save time, improve efficiency, and stay ahead of the competition.",
+    "button": "Start for free"
+  },
+  "general": {
+    "contact": "Contact"
+  },
+  "about": {
+    "headline": "is an innovative tool that lets you quickly and efficiently create professional PDF reports and notes using only voice commands.",
+    "description": "With minimal effort, you save valuable time and simplify your daily tasks. Automate your documentation and speed up processes — stay one step ahead of the competition and focus on what truly matters: your customers and your business.",
+    "ideal-for": "Ideal for anyone who wants to modernize their workflow, eliminate unnecessary paperwork, and raise the quality of their business to a higher level.",
+    "how-it-helps": "How Docora helps you:",
+    "features": {
+      "speech-to-text": "Converts speech to text",
+      "structure-report": "Structures reports",
+      "generate-pdf": "Generates PDFs",
+      "send-report": "Sends reports wherever you want (Gmail, Viber)",
+      "user-login": "Login for user"
+    }
+  },
+  "feature-page": {
+    "headline": "Why Choose Docora?"
+  },
+  "testimonial-page": {
+    "title": "What our users say?"
+  },
+  "pricing": {
+    "title": "Docora is here for you. Choose a plan.",
+    "mostPopular": "Most Popular",
+    "selectPlan": "Select Plan",
+    "contact": "Contact",
+    "selectedPlan": "You selected the plan: {{plan}}"
+  },
+  "footer": {
+    "logo": "Docora",
+    "description": "Docora is a platform that makes creating reports and notes easier by using voice. Whether you're a professional, entrepreneur, or a team member taking notes, Docora saves you time and eliminates the need for manual typing.",
+    "linksTitle": "Links",
+    "links": {
+      "home": "Home",
+      "login": "Login",
+      "signup": "Sign Up",
+      "contact": "Contact"
+    },
+    "followUs": "Follow us",
+    "copyright": "All rights reserved."
+  },
+  "contactForm": {
+    "title": "Contact Us",
+    "description": "Have questions, suggestions, or want a custom offer tailored to your needs? Write us using the form below – we’re here to help you as quickly as possible.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Your email",
+    "messagePlaceholder": "Your message",
+    "sendButton": "Send Message",
+    "sending": "Sending...",
+    "toastSuccess": "Your message has been sent.",
+    "toastError": "Error sending message."
+  },
+  "report": {
+    "headline": "Create a detailed report or note",
+    "name": "Full name",
+    "phone": "Mobile Phone",
+    "email": "Email",
+    "date-of-birth": "Date of Birth",
+    "description": "Description or Notes",
+    "button": "Generate report",
+    "button-two": "In progress...",
+    "listening":"Stop Recording",
+    "listening-two":"Speak"
+  },
+    "report-display":{
+    "headline":"Generated report",
+    "button":"Sending...",
+    "button-two":"Send PDF to Email",
+    "success":"The report has been successfully sent to the email!",
+    "error":"An error occurred while sending the email."
+  }
+}

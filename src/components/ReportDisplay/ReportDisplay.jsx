@@ -4,6 +4,7 @@ import pdfFonts from "pdfmake/build/vfs_fonts";
 import { sendReport } from "../../api/api";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useTranslation } from "react-i18next";
 import "./ReportDisplay.css";
 
 pdfMake.vfs = pdfFonts.vfs;
@@ -11,6 +12,7 @@ pdfMake.vfs = pdfFonts.vfs;
 const ReportDisplay = React.memo(
   ({ report, email, patientData, clearReport }) => {
     const [loading, setLoading] = useState(false);
+    const { t } = useTranslation();
 
     const generateAndSendPdf = useCallback(() => {
       if (!email || !email.includes("@")) {
@@ -170,7 +172,7 @@ const ReportDisplay = React.memo(
       pdfMake.createPdf(docDefinition).getBlob(async (blob) => {
         try {
           await sendReport(email, blob);
-          toast.success("Izveštaj je uspešno poslat na mejl!", {
+          toast.success(t("report-display-success"), {
             toastId: "report-sent",
             className: "my-toast",
             progressClassName: "my-toast-progress",
@@ -178,7 +180,7 @@ const ReportDisplay = React.memo(
           clearReport();
         } catch (error) {
           console.error("Greška pri slanju mejla:", error);
-          toast.error("Došlo je do greške prilikom slanja mejla.", {
+          toast.error(t("report-display-error"), {
             toastId: "report-error",
           });
         } finally {
@@ -192,14 +194,16 @@ const ReportDisplay = React.memo(
         {report && (
           <div className="container-main">
             <div className="report-container">
-              <h2>Generisani izveštaj</h2>
+              <h2>{t("report-display.headline")}</h2>
               <pre className="report-preview">{report}</pre>
               <button
                 className="send-button"
                 onClick={generateAndSendPdf}
                 disabled={loading}
               >
-                {loading ? "Šaljem..." : "Pošalji PDF na mejl"}
+                {loading
+                  ? t("report-display.button")
+                  : t("report-display.button-two")}
               </button>
             </div>
           </div>
